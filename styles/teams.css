@@ -10,7 +10,7 @@
 .teams ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 0px;
   padding: 0;
 }
 
@@ -18,6 +18,8 @@
   position: relative;
   /* 개별 요소 기준으로 after 배치 */
   display: inline-block;
+  margin-right: -130px;
+  z-index: 10;
 }
 
 .teams li::after {
@@ -48,3 +50,9 @@
 .teams img:hover {
   transform: scale(1.1);
 }
+
+.teams li.infp { z-index: 15;}
+.teams li.istj { z-index: 14;}
+.teams li.estj { z-index: 13;}
+.teams li.entp { z-index: 12;}
+.teams li.intj { z-index: 11;}
