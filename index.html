@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1B4</title>
+
+    <!-- 부트스트랩 import -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&display=swap");
+
+      * {
+        font-family: "Do Hyeon", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+      }
+
+      .team-title {
+        font-size: 6rem;
+        text-align: center;
+        font-family: "Bagel Fat One";
+        letter-spacing: 25px;
+      }
+
+      .status-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-size: 1.4rem;
+      }
+
+      .status-container .current-date {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        font-size: 1.2rem;
+      }
+
+      .status-container .team-status {
+        font-weight: bold;
+      }
+
+      .divider {
+        border-top: 5px solid black;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .nav li {
+        margin: 0 100px;
+        font-size: xx-large;
+      }
+
+      .teams {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-color: black;
+      }
+
+      .teams ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .teams li {
+        list-style-type: none;
+      }
+
+      .teams img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+      }
+
+      .goals-promise {
+        background-color: green;
+        padding: 50px 0;
+        display: flex;
+      }
+
+      .guestbook {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="p-3 text-bg-dark">
+      <div class="nav-header">
+        <h1 class="team-title">F1T4</h1>
+        <!-- 현재 날짜 & 현재 상태 -->
+        <div class="status-container">
+          <span id="current-date"></span>
+          <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 네비게이션 탭 -->
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <!-- 네비게이션 메뉴 -->
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 w-100"
+        >
+          <li><a href="#" class="nav-link px-2">팀원 소개</a></li>
+          <li>
+            <a href="#" class="nav-link px-2">목표 & 약속</a>
+          </li>
+          <li><a href="#" class="nav-link px-2">방명록</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 본문 섹션 -->
+    <div>
+      <!-- 팀원 -->
+      <div class="teams">
+        <ul>
+          <li>
+            <img class="entp" src="./assets/entp.png" />
+          </li>
+          <li>
+            <img class="estj" src="./assets/estj.png" />
+          </li>
+          <li>
+            <img class="infp" src="./assets/infp.png" />
+          </li>
+          <li>
+            <img class="intj" src="./assets/intj.png" />
+          </li>
+          <li>
+            <img class="istj" src="./assets/istj.png" />
+          </li>
+        </ul>
+      </div>
+
+      <!-- 목표와 약속 -->
+      <div class="goals-promise">
+        <div class="container col-md-8">
+          <div class="goals">
+            <h1>목표</h1>
+            <ul class="goals-list">
+              <li>🎯 프로젝트 완성도 높이기</li>
+              <li>💪 팀워크 향상시키기</li>
+              <li>📚 새로운 기술 습득하기</li>
+            </ul>
+          </div>
+
+          <div class="promise">
+            <h1>약속</h1>
+            <ul class="promise-list">
+              <li>⏰ 시간 약속 잘 지키기</li>
+              <li>🤝 서로 배려하며 소통하기</li>
+              <li>✨ 적극적으로 참여하기</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 응원하기 -->
+      <div class="guestbook">
+        <div class="container col-md-8">
+          <h1>응원하기</h1>
+          <!-- 방명록 목록 -->
+          <div class="guestbook-list col-md-8">
+            <!-- 댓글 리스트 -->
+            <div class="comments-list">
+              <!-- 샘플 댓글 -->
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">홍길동</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
+                </div>
+              </div>
+
+              <!-- 샘플 댓글 -->
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">김철수</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-primary">
+            우리 팀을 응원해주세요 ❗️
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 현재 날짜 출력 스크립트 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dateElement = document.getElementById("current-date");
+        if (dateElement) {
+          const today = new Date();
+          dateElement.textContent = `📌 ${today.toLocaleDateString("ko-KR")}`;
+        }
+      });
+    </script>
+  </body>
+</html>
