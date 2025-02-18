@@ -40,48 +40,48 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section"); // 해당 위치의 섹션 선택
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section"); // 해당 위치의 섹션 선택
 
-  // 클릭 이벤트 (이미 적용됨)
-  navLinks.forEach(link => {
-      link.addEventListener("click", (e) => {
-          e.preventDefault(); // 기본 페이지 이동 방지
+    // 클릭 이벤트 (이미 적용됨)
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault(); // 기본 페이지 이동 방지
 
-          // 모든 네비게이션 링크에서 'active' 클래스 제거
-          navLinks.forEach(nav => nav.classList.remove("active"));
+            // 모든 네비게이션 링크에서 'active' 클래스 제거
+            navLinks.forEach(nav => nav.classList.remove("active"));
 
-          // 클릭된 요소에 'active' 클래스 추가
-          link.classList.add("active");
+            // 클릭된 요소에 'active' 클래스 추가
+            link.classList.add("active");
 
-          // 해당 섹션 위치로 이동
-          const targetId = link.getAttribute("href").substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-              window.scrollTo({
-                  top: targetSection.offsetTop - 50, // 헤더 높이 고려
-                  behavior: "smooth"
-              });
-          }
-      });
-  });
+            // 해당 섹션 위치로 이동
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // 헤더 높이 고려
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 
-  // 스크롤 이벤트 추가 (현재 위치에 맞는 네비게이션 업데이트)
-  window.addEventListener("scroll", () => {
-      let scrollPosition = window.scrollY + 100; // 현재 스크롤 위치 (조금 여유 두기)
+    // 스크롤 이벤트 추가 (현재 위치에 맞는 네비게이션 업데이트)
+    window.addEventListener("scroll", () => {
+        let scrollPosition = window.scrollY + 100; // 현재 스크롤 위치 (조금 여유 두기)
 
-      sections.forEach(section => {
-          if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-              let currentId = section.getAttribute("id");
+        sections.forEach(section => {
+            if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                let currentId = section.getAttribute("id");
 
-              // 모든 네비게이션 링크에서 'active' 제거 후, 현재 섹션만 활성화
-              navLinks.forEach(nav => {
-                  nav.classList.remove("active");
-                  if (nav.getAttribute("href").substring(1) === currentId) {
-                      nav.classList.add("active");
-                  }
-              });
-          }
-      });
-  });
+                // 모든 네비게이션 링크에서 'active' 제거 후, 현재 섹션만 활성화
+                navLinks.forEach(nav => {
+                    nav.classList.remove("active");
+                    if (nav.getAttribute("href").substring(1) === currentId) {
+                        nav.classList.add("active");
+                    }
+                });
+            }
+        });
+    });
 });

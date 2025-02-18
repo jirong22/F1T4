@@ -9,8 +9,6 @@
   flex-direction: column; 
 }
 
-<<<<<<< HEAD
-=======
 /* 전체 컨테이너 */
 .layout-container {
   display: flex;
@@ -133,4 +131,3 @@
 .circle-item:hover {
   transform: scale(1.2);
 }
->>>>>>> 84b12618173d1fa40736705bf3ef058e05973bd1
