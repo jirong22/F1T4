@@ -1,4 +1,7 @@
-export function openModal() {
+$('.openbtn').click(openModal);
+$('.closebtn').click(closeModal);
+
+function openModal() {
   const scrollY = $(window).scrollTop();
   const windowHeight = $(window).height();
 
@@ -13,7 +16,7 @@ export function openModal() {
   });
 }
 
-export function closeModal() {
+function closeModal() {
   $(".modal-bg").css("display", "none");
   $(".modal-content").css("display", "none");
 }
