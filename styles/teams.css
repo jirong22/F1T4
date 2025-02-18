@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  margin: 50px auto 50px auto;
+  margin: -50px auto 130px auto;
   background-color: transparent;
   position: relative;
   transform: translateX(-65px);

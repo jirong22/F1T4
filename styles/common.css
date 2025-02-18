@@ -25,5 +25,26 @@ header {
 }
 
 body {
-  padding-top: 300px;
+  padding-top: 400px;
+}
+
+/* 모든 컨텐츠 섹션의 크기 & 간격 조정 */
+main {
+  min-height: 100vh; /* 최소 높이를 화면 전체(viewport height)로 설정 */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 세로 방향 정렬 */
+}
+
+section > .teams, .goals-promise, .guestbook {
+  min-height: 900px; /* 최소 높이를 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 50px 20px; /* 패딩을 늘려서 여백 확보 */
+  width: 100%; /* 전체 너비 차지 */
 }
