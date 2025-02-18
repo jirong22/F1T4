@@ -1,11 +1,134 @@
-#goals-promise {
+.goals-promise {
   scroll-margin-top: 200px;
 }
 
 .goals-promise {
-  background-color: green;
+  background-color: white;
   padding: 50px 0;
   display: flex;
   flex-direction: column; /* 세로 정렬로 변경 */
   min-height: 700px; /* 최소 높이 설정 */
+}
+
+/* 전체 컨테이너 */
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 50px auto;
+  height: 100vh;
+  /* 현재 전체화면 높이 */
+}
+
+/* 약속+목표 섹션 */
+.left-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 2;
+  gap: 20px;
+}
+
+.desc-promise {
+  /*약속*/
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 20px;
+  flex: 1;
+}
+
+.desc-goal {
+  /*목표*/
+  margin-left: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  gap: 20px;
+  flex: 1;
+}
+
+/* 원형 메뉴 섹션 */
+
+.right-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.desc-item {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.6;
+}
+
+.desc-item.active {
+  transform: scale(1.2) !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
+}
+
+/* 오른쪽 원형 메뉴 스타일 */
+.circle-menu {
+  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #5b5b5b;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.circle-item {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  position: absolute;
+
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+
+/*원 안의 아이템 둥글게 정렬*/
+.circle-item:nth-child(1) {
+  transform: rotate(0deg) translate(180px) rotate(0deg);
+}
+
+.circle-item:nth-child(2) {
+  transform: rotate(60deg) translate(180px) rotate(-60deg);
+}
+
+.circle-item:nth-child(3) {
+  transform: rotate(120deg) translate(180px) rotate(-120deg);
+}
+
+.circle-item:nth-child(4) {
+  transform: rotate(180deg) translate(180px) rotate(-180deg);
+}
+
+.circle-item:nth-child(5) {
+  transform: rotate(240deg) translate(180px) rotate(-240deg);
+}
+
+.circle-item:nth-child(6) {
+  transform: rotate(300deg) translate(180px) rotate(-300deg);
+}
+
+.circle-item:hover {
+  transform: scale(1.2);
 }
