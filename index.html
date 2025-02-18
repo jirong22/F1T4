@@ -12,9 +12,164 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script>
+      function openModal() {
+        const scrollY = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        const modalTop = scrollY + windowHeight / 2;
+
+        $('.modal-bg').css("display", "block");
+        $('.modal-content').css({
+          "display": "block",
+          "top": `${modalTop}px`, 
+          "transform": "translate(-50%, -50%)", 
+          "left": "50%" 
+        });
+      }
+
+
+      function closeModal() {
+        $('.modal-bg').css("display", "none");
+        $('.modal-content').css("display", "none");
+      }
+    </script>
+
+<<<<<<< HEAD
     <!-- 스타일 태그 분리 -->
     <link rel="stylesheet" href="./styles/main.css" />
+=======
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&display=swap");
+
+      * {
+        font-family: "Do Hyeon", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .nav-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+      }
+
+      .team-title {
+        font-size: 6rem;
+        text-align: center;
+        font-family: "Bagel Fat One";
+        letter-spacing: 25px;
+      }
+
+      .status-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-size: 1.4rem;
+      }
+
+      .status-container .current-date {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        font-size: 1.2rem;
+      }
+
+      .status-container .team-status {
+        font-weight: bold;
+      }
+
+      .divider {
+        border-top: 5px solid black;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .nav li {
+        margin: 0 100px;
+        font-size: xx-large;
+      }
+
+      .teams {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-color: black;
+      }
+
+      .teams ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .teams li {
+        list-style-type: none;
+      }
+
+      .teams img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+      }
+
+      .goals-promise {
+        background-color: green;
+        padding: 50px 0;
+        display: flex;
+      }
+
+      .guestbook {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        display: flex;
+      }
+
+      .modal-bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+        display: none;
+      }
+
+      .modal-content {
+        padding: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 1000px;
+        height: 500px;
+        background: #fff;
+        z-index: 1000;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      .button {
+        position: fixed;
+        bottom: 10px;
+        right: 30px;
+      }
+
+    </style>
+>>>>>>> 1f831b4 (응원하기 상세 모달 추가)
   </head>
 
   <body>
@@ -125,11 +280,40 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn btn-outline-primary">
+          <button type="button" class="btn btn-outline-primary" onclick="openModal()">
             우리 팀을 응원해주세요 ❗️
           </button>
         </div>
       </div>
+    </div>
+
+    <!-- 모달 백그라운드 -->
+    <div class="modal-bg"></div>
+    <!-- 응원 문구 작성 모달 부분 -->
+    <!-- css에서 .cheercomment로 쓰면 됨 -->
+    <div class="modal-content cheercomment" id="cheercomment">
+        <div class="mb-3">
+          <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
+          <div class="form-floating mb-3 image">
+            <input type="text" class="form-control" id="image" placeholder="image">
+            <label for="image">이미지 주소</label>
+          </div>
+          <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+          <div class="form-floating mb-3 name">
+            <input type="text" class="form-control" id="name" placeholder="name">
+            <label for="name">이름</label>
+          </div>
+          <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+          <div class="form-floating content">
+            <textarea class="form-control" placeholder="Leave a comment here" id="content" style="height: 200px"></textarea>
+            <label for="content">응원 내용</label>
+          </div>
+        </div>
+        <!-- css에서 .button 부분 -->
+        <div class="mb-3 button">
+          <button type="button" class="btn btn-light">등록</button>
+          <button type="button" class="btn btn-dark" onclick="closeModal()">닫기</button>
+        </div>
     </div>
 
     <!-- 현재 날짜 출력 스크립트 -->
