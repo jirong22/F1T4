@@ -15,27 +15,7 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-      function openModal() {
-        const scrollY = $(window).scrollTop();
-        const windowHeight = $(window).height();
- 
-        const modalTop = scrollY + windowHeight / 2;
-
-        $('.modal-bg').css("display", "block");
-        $('.modal-content').css({
-          "display": "block",
-          "top": `${modalTop}px`, 
-          "transform": "translate(-50%, -50%)", 
-          "left": "50%" 
-        });
-      }
-
-      function closeModal() {
-        $('.modal-bg').css("display", "none");
-        $('.modal-content').css("display", "none");
-      }
-    </script>
+    <script type="module" src="./scripts/modal.js"></script>
 
     <!-- 스타일 태그 분리 -->
     <link rel="stylesheet" href="./styles/main.css" />
@@ -63,11 +43,11 @@
         <ul
           class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 w-100"
         >
-          <li><a href="#" class="nav-link px-2">팀원 소개</a></li>
+          <li><a href="#teams" class="nav-link px-2">팀원 소개</a></li>
           <li>
-            <a href="#" class="nav-link px-2">목표 & 약속</a>
+            <a href="#goals-promise" class="nav-link px-2">목표 & 약속</a>
           </li>
-          <li><a href="#" class="nav-link px-2">방명록</a></li>
+          <li><a href="#guestbook" class="nav-link px-2">방명록</a></li>
         </ul>
       </div>
     </header>
@@ -75,10 +55,10 @@
     <!-- 본문 섹션 -->
     <div>
       <!-- 팀원 -->
-      <div class="teams">
+      <div class="teams" id="teams">
         <ul>
           <li>
-            <img class="intj" src="./assets/intj.png" />
+            <img class="entp" src="./assets/entp.png" />
           </li>
           <li>
             <img class="estj" src="./assets/estj.png" />
@@ -87,16 +67,16 @@
             <img class="infp" src="./assets/infp.png" />
           </li>
           <li>
-            <img class="istj" src="./assets/istj.png" />
+            <img class="intj" src="./assets/intj.png" />
           </li>
           <li>
-            <img class="entp" src="./assets/entp.png" />
+            <img class="istj" src="./assets/istj.png" />
           </li>
         </ul>
       </div>
 
       <!-- 목표와 약속 -->
-      <div class="goals-promise">
+      <div class="goals-promise" id="goals-promise">
         <div class="container col-md-8">
           <div class="goals">
             <h1>목표</h1>
@@ -119,7 +99,7 @@
       </div>
 
       <!-- 응원하기 -->
-      <div class="guestbook">
+      <div class="guestbook" id="guestbook">
         <div class="container col-md-8">
           <h1>응원하기</h1>
           <!-- 방명록 목록 -->
@@ -149,7 +129,11 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn btn-outline-primary" onclick="openModal()">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="openModal()"
+          >
             우리 팀을 응원해주세요 ❗️
           </button>
         </div>
@@ -161,41 +145,48 @@
     <!-- 응원 문구 작성 모달 부분 -->
     <!-- css에서 .cheercomment로 쓰면 됨 -->
     <div class="modal-content cheercomment" id="cheercomment">
-        <div class="mb-3">
-          <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
-          <div class="form-floating mb-3 image">
-            <input type="text" class="form-control" id="image" placeholder="image">
-            <label for="image">이미지 주소</label>
-          </div>
-          <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
-          <div class="form-floating mb-3 name">
-            <input type="text" class="form-control" id="name" placeholder="name">
-            <label for="name">이름</label>
-          </div>
-          <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
-          <div class="form-floating content">
-            <textarea class="form-control" placeholder="Leave a comment here" id="content" style="height: 200px"></textarea>
-            <label for="content">응원 내용</label>
-          </div>
+      <div class="mb-3">
+        <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
+        <div class="form-floating mb-3 image">
+          <input
+            type="text"
+            class="form-control"
+            id="image"
+            placeholder="image"
+          />
+          <label for="image">이미지 주소</label>
         </div>
-        <!-- css에서 .button 부분 -->
-        <div class="mb-3 button">
-          <button type="button" class="btn btn-light">등록</button>
-          <button type="button" class="btn btn-dark" onclick="closeModal()">닫기</button>
+        <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+        <div class="form-floating mb-3 name">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="name"
+          />
+          <label for="name">이름</label>
         </div>
+        <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+        <div class="form-floating content">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="content"
+            style="height: 200px"
+          ></textarea>
+          <label for="content">응원 내용</label>
+        </div>
+      </div>
+      <!-- css에서 .button 부분 -->
+      <div class="mb-3 button">
+        <button type="button" class="btn btn-light">등록</button>
+        <button type="button" class="btn btn-dark" onclick="closeModal()">
+          닫기
+        </button>
+      </div>
     </div>
 
     <!-- 현재 날짜 출력 스크립트 -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dateElement = document.getElementById("current-date");
-        if (dateElement) {
-          const today = new Date();
-          dateElement.textContent = `📌 ${today.toLocaleDateString("ko-KR")}`;
-        }
-      });
-    </script>
+    <script src="./scripts/curdate.js"></script>
   </body>
 </html>
-
-
