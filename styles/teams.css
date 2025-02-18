@@ -53,8 +53,31 @@
   transform: scale(1.1);
 }
 
-.teams li.infp { z-index: 15;}
-.teams li.istj { z-index: 14;}
-.teams li.estj { z-index: 13;}
-.teams li.entp { z-index: 12;}
-.teams li.intj { z-index: 11;}
+.teams li.infp {
+  z-index: 15;
+}
+.teams li.istj {
+  z-index: 14;
+}
+.teams li.estj {
+  z-index: 13;
+}
+.teams li.entp {
+  z-index: 12;
+}
+.teams li.intj {
+  z-index: 11;
+}
+
+.highlight {
+  font-family: "Bagel Fat One", sans-serif;
+  letter-spacing: 25px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.highlight.active {
+  font-weight: bold;
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out;
+}

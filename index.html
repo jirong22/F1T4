@@ -15,7 +15,7 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script type="module" src="./scripts/modal.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 
     <!-- 스타일 태그 분리 -->
     <link rel="stylesheet" href="./styles/main.css" />
@@ -25,10 +25,15 @@
     <!-- 헤더 섹션 -->
     <header class="p-3 text-bg-dark">
       <div class="nav-header">
-        <h1 class="team-title">F1T4</h1>
+        <h1 class="team-title">
+          <span class="highlight">F</span>
+          <span class="highlight">1</span>
+          <span class="highlight">T</span>
+          <span class="highlight">4</span>
+        </h1>
         <!-- 현재 날짜 & 현재 상태 -->
         <div class="status-container">
-          <span class=team-status id="current-date"></span>
+          <span class="team-status" id="current-date"></span>
           <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
         </div>
       </div>
@@ -53,81 +58,90 @@
     </header>
 
     <!-- 본문 섹션 -->
-<main>
-  <!-- 팀원 섹션 -->
-  <section class="teams" id="teams">
-    <ul>
-      <li><img class="intj" src="./assets/intj.png" /></li>
-      <li><img class="estj" src="./assets/estj.png" /></li>
-      <li><img class="infp" src="./assets/infp.png" /></li>
-      <li><img class="istj" src="./assets/istj.png" /></li>
-      <li><img class="entp" src="./assets/entp.png" /></li>
-    </ul>
-  </section>
-
-  <!-- 목표와 약속 섹션 -->
-  <section class="goals-promise" id="goals-promise">
-    <div class="container col-md-8">
-      <div class="goals">
-        <h1>목표</h1>
-        <ul class="goals-list">
-          <li>🎯 프로젝트 완성도 높이기</li>
-          <li>💪 팀워크 향상시키기</li>
-          <li>📚 새로운 기술 습득하기</li>
+    <main>
+      <!-- 팀원 섹션 -->
+      <section class="teams" id="teams">
+        <ul>
+          <li class="team-member" data-mbti="ENTP">
+            <img class="intj" src="./assets/intj.png" />
+          </li>
+          <li class="team-member" data-mbti="ESTJ">
+            <img class="estj" src="./assets/estj.png" />
+          </li>
+          <li class="team-member" data-mbti="INFP">
+            <img class="infp" src="./assets/infp.png" />
+          </li>
+          <li class="team-member" data-mbti="INTJ">
+            <img class="istj" src="./assets/istj.png" />
+          </li>
+          <li class="team-member" data-mbti="ISTJ">
+            <img class="entp" src="./assets/entp.png" />
+          </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="promise">
-        <h1>약속</h1>
-        <ul class="promise-list">
-          <li>⏰ 시간 약속 잘 지키기</li>
-          <li>🤝 서로 배려하며 소통하기</li>
-          <li>✨ 적극적으로 참여하기</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 응원하기(방명록) 섹션 -->
-  <section class="guestbook" id="guestbook">
-    <div class="container col-md-8">
-      <h1>응원하기</h1>
-      <!-- 방명록 목록 -->
-      <div class="guestbook-list col-md-8">
-        <!-- 댓글 리스트 -->
-        <div class="comments-list">
-          <div class="comment-item">
-            <div class="comment-header">
-              <strong class="commenter-name">홍길동</strong>
-              <span class="comment-date">2024.03.19</span>
-            </div>
-            <div class="comment-content">
-              <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
-            </div>
+      <!-- 목표와 약속 섹션 -->
+      <section class="goals-promise" id="goals-promise">
+        <div class="container col-md-8">
+          <div class="goals">
+            <h1>목표</h1>
+            <ul class="goals-list">
+              <li>🎯 프로젝트 완성도 높이기</li>
+              <li>💪 팀워크 향상시키기</li>
+              <li>📚 새로운 기술 습득하기</li>
+            </ul>
           </div>
 
-          <div class="comment-item">
-            <div class="comment-header">
-              <strong class="commenter-name">김철수</strong>
-              <span class="comment-date">2024.03.19</span>
-            </div>
-            <div class="comment-content">
-              <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
-            </div>
+          <div class="promise">
+            <h1>약속</h1>
+            <ul class="promise-list">
+              <li>⏰ 시간 약속 잘 지키기</li>
+              <li>🤝 서로 배려하며 소통하기</li>
+              <li>✨ 적극적으로 참여하기</li>
+            </ul>
           </div>
         </div>
-      </div>
-      <button
-        type="button"
-        class="btn btn-outline-primary"
-        onclick="openModal()"
-      >
-        우리 팀을 응원해주세요 ❗️
-      </button>
-    </div>
-  </section>
-</main>
+      </section>
 
+      <!-- 응원하기(방명록) 섹션 -->
+      <section class="guestbook" id="guestbook">
+        <div class="container col-md-8">
+          <h1>응원하기</h1>
+          <!-- 방명록 목록 -->
+          <div class="guestbook-list col-md-8">
+            <!-- 댓글 리스트 -->
+            <div class="comments-list">
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">홍길동</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
+                </div>
+              </div>
+
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">김철수</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="openModal()"
+          >
+            우리 팀을 응원해주세요 ❗️
+          </button>
+        </div>
+      </section>
+    </main>
 
     <!-- 모달 백그라운드 -->
     <div class="modal-bg"></div>
