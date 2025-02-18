@@ -1,0 +1,41 @@
+.nav-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.team-title {
+  font-size: 6rem;
+  text-align: center;
+  font-family: "Bagel Fat One";
+  letter-spacing: 25px;
+}
+
+.status-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 1.4rem;
+}
+
+.status-container .current-date {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 1.2rem;
+}
+
+.status-container .team-status {
+  font-weight: bold;
+}
+
+.nav li {
+  margin: 0 100px;
+  font-size: xx-large;
+}
