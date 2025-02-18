@@ -3,14 +3,16 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  padding: 20px;
+  padding: 0px;
 }
+
 
 .team-title {
   font-size: 6rem;
   text-align: center;
   font-family: "Bagel Fat One";
   letter-spacing: 25px;
+
 }
 
 .status-container {
@@ -33,9 +35,16 @@
 
 .status-container .team-status {
   font-weight: bold;
+  font-size: 20px;
 }
 
-.nav li {
+.nav-link {
+  color: black; /* 기본 색상 (파란색) */
   margin: 0 100px;
-  font-size: xx-large;
+  font-size: 20px;
 }
+
+.nav-link:hover {
+  color: #3e3e3e; /* 마우스 올릴 때 */
+}
+

@@ -1,13 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
 * {
-  font-family: "Do Hyeon", serif;
+  font-family: "IBM Plex Sans KR", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .divider {
-  border-top: 5px solid black;
+  border-top: 2px solid black;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+/* 헤더 고정 */
+header {
+  background-color: white;
+  position: fixed;
+  top : 0;
+  left : 0;
+  right: 0;
+  z-index: 10;
+  height: 200px;
+}
+
+body {
+  padding-top: 300px;
 }
