@@ -12,6 +12,7 @@
   height: 00pxflex; /* 고정 높이 자동 */
 }
 
+<<<<<<< HEAD
 #guestbook h1 {
   font-size: 2.5rem; 
   color: #333; 
@@ -86,3 +87,11 @@ button:focus {
   display: flex;
   flex-direction: row;
   }
+=======
+.comment-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+>>>>>>> 84b12618173d1fa40736705bf3ef058e05973bd1
