@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
+<<<<<<< HEAD
 <body>
   <!-- 헤더 섹션 -->
   <header class="p-3 text-bg-dark">
@@ -32,6 +33,223 @@
       <div class="status-container">
         <span class="team-status" id="current-date"></span>
         <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
+=======
+      <div class="divider"></div>
+
+      <!-- 네비게이션 탭 -->
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <!-- 네비게이션 메뉴 -->
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 w-100"
+        >
+          <li><a href="#teams" class="nav-link px-2">팀원 소개</a></li>
+          <li>
+            <a href="#goals-promise" class="nav-link px-2">목표 & 약속</a>
+          </li>
+          <li><a href="#guestbook" class="nav-link px-2">방명록</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 본문 섹션 -->
+    <main>
+      <!-- 팀원 섹션 -->
+      <section class="teams" id="teams">
+        <ul>
+          <li class="team-member" data-mbti="INTJ">
+            <img
+              class="intj"
+              src="./assets/intj.png"
+              id="intj-img"
+              alt="INTJ"
+            />
+          </li>
+          <li class="team-member" data-mbti="ESTJ">
+            <img
+              class="estj"
+              src="./assets/estj.png"
+              id="estj-img"
+              alt="ESTJ"
+            />
+          </li>
+          <li class="team-member" data-mbti="INFP">
+            <img
+              class="infp"
+              src="./assets/infp.png"
+              id="infp-img"
+              alt="INFP"
+            />
+          </li>
+          <li class="team-member" data-mbti="ENTP">
+            <img
+              class="entp"
+              src="./assets/entp.png"
+              id="entp-img"
+              alt="ENTP"
+            />
+          </li>
+          <li class="team-member" data-mbti="ISTJ">
+            <img
+              class="istj"
+              src="./assets/istj.png"
+              id="istj-img"
+              alt="ISTJ"
+            />
+          </li>
+        </ul>
+
+        <div class="teamdt-bg">
+          <div class="teamdt-content">
+            <div class="image-box d-flex align-items-center"></div>
+            <div class="form-container">
+              <input type="text" class="form-control-name" placeholder="이름" />
+              <textarea
+                class="form-control-dt"
+                rows="8"
+                placeholder="상세정보"
+              ></textarea>
+              <div class="buttons mb-3">
+                <button class="btn-success"></button>
+                <button class="btn-info"></button>
+                <button class="btn-danger closebtn">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 목표와 약속 섹션 -->
+      <section class="goals-promise" id="goals-promise">
+        <div class="layout-container">
+          <!-- 왼쪽 1/2 (약속+목표) -->
+          <div class="left-sec">
+            <!--약속-->
+            <div class="desc-promise">
+              <div class="desc-item" data-key="a1">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="a2">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="a3">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+            </div>
+
+            <!-- 오른쪽 (목표) -->
+            <div class="desc-goal">
+              <div class="desc-item" data-key="b1">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="b2">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="b3">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-sec">
+            <!-- 오른쪽 원형 메뉴 -->
+            <div class="circle-menu">
+              <div class="circle-item" data-key="a1">💡</div>
+              <div class="circle-item" data-key="b1">⏰</div>
+              <div class="circle-item" data-key="a2">💌</div>
+              <div class="circle-item" data-key="b2">📋</div>
+              <div class="circle-item" data-key="a3">📖</div>
+              <div class="circle-item" data-key="b3">📝</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 응원하기(방명록) 섹션 -->
+      <section class="guestbook" id="guestbook">
+        <div class="container col-md-8">
+          <h1>응원하기</h1>
+          <!-- 방명록 목록 -->
+          <div class="guestbook-list col-md-8">
+            <!-- 댓글 리스트 -->
+            <div class="comments-list">
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">홍길동</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
+                </div>
+              </div>
+
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">김철수</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-primary openbtn">
+            우리 팀을 응원해주세요 ❗️
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- 모달 백그라운드 -->
+    <div class="modal-bg"></div>
+    <!-- 응원 문구 작성 모달 부분 -->
+    <!-- css에서 .cheercomment로 쓰면 됨 -->
+    <div class="modal-content cheercomment" id="cheercomment">
+      <div class="mb-3">
+        <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
+        <div class="form-floating mb-3 image">
+          <input
+            type="text"
+            class="form-control"
+            id="image"
+            placeholder="image"
+          />
+          <label for="image">이미지 주소</label>
+        </div>
+        <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+        <div class="form-floating mb-3 name">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="name"
+          />
+          <label for="name">이름</label>
+        </div>
+        <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+        <div class="form-floating content">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="content"
+            style="height: 200px"
+          ></textarea>
+          <label for="content">응원 내용</label>
+        </div>
+      </div>
+      <!-- css에서 .button 부분 -->
+      <div class="mb-3 button">
+        <button type="button" class="btn btn-light postingbtn">등록</button>
+        <button type="button" class="btn btn-dark closebtn">닫기</button>
+>>>>>>> 39f1c73aa71e99df8bfbffc2f5b1eb4c06a7ab38
       </div>
     </div>
 

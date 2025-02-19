@@ -6,17 +6,17 @@
   max-width: 100%;
   margin: auto; /* 중앙 정렬 */
   overflow: hidden; /* 내용이 넘치지 않게 처리 */
-  display: flex; /*  레이아웃 설정 */
-  flex-direction: row; /* 가로로 배치 */
-  justify-content: space-between; /* 두 섹션을 양쪽 끝으로 배치 */
-  height: auto; /* 화면크기에 맞추기 */
+  display: flex; /* 레이아웃 설정 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: flex-start; /* 여백 분배 */
+  height: auto; /* 화면 크기에 맞추기 */
 }
 
 #guestbook h1 {
   font-size: 2.5rem;
   color: #333;
-  text-align: auto;
-  margin-bottom: 30px;
+  text-align: left; /* 왼쪽 정렬 */
+  margin-bottom: 20px; /* 제목 아래에 간격 추가 */
   font-weight: bold;
 }
 
@@ -25,7 +25,7 @@
   flex-direction: column; /* 세로로 정렬 */
   gap: 30px; /* 각 댓글 사이 간격 */
   flex-grow: 1; /* 댓글 리스트가 가능한 공간을 채우게 설정 */
-  width: 60%; /* 방명록 목록 영역 너비 */
+  width: 80%; /* 방명록 목록 영역 너비 */
 }
 
 .comment-item {
@@ -93,20 +93,30 @@ button:focus {
 
 .guestbook .container {
   display: flex;
-  flex-direction: column; /* 세로 방향으로 설정 */
+  flex-direction: row; /* 제목과 방명록 목록을 한 줄로 배치 */
   gap: 20px;
   width: 100%;
-  height: auto; /* 버튼과 댓글 리스트가 함께 보이도록 설정 */
+  align-items: flex-start; /* 제목과 방명록을 상단에 정렬 */
+}
+
+.guestbook .container > h1 {
+  flex: 0 0 auto; /* 제목 영역 크기 고정 */
+  margin: 0; /* 제목의 margin 없애기 */
+}
+
+.guestbook .container > .guestbook-list {
+  flex-grow: 1; /* 방명록 리스트가 남은 공간을 채우게 설정 */
 }
 
 .button-container {
-  width: 30%; /* 버튼 섹션 너비 */
+  width: 100%; /* 버튼 섹션 너비 */
   display: flex;
   justify-content: center; /* 버튼을 가운데 정렬 */
   flex-direction: column; /* 버튼을 세로로 정렬 */
   align-items: center;
+  margin-top: 30px; /* 제목과 방명록 목록 아래로 버튼 배치 */
 }
 
 .button-container button {
-  width: 100%; /* 버튼이 버튼 섹션에 맞게 확장 */
+  width: 70%; /* 버튼의 너비를 설정 */
 }

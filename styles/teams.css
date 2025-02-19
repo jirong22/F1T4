@@ -81,3 +81,20 @@
   transform: scale(1.3);
   transition: transform 0.3s ease-in-out;
 }
+
+/* #intj-img {
+  transform: translateX(-950px);
+}
+#istj-img {
+  transform: translateX(-900px);
+}
+#estj-img {
+  transform: translateX(-600px);
+}
+#entp-img {
+  transform: translateX(-1100px);
+}
+#infp-img {
+  transform: translateX(-750px);
+} */
+/* 캐릭터-모달창 띄울 시 화면 왼쪽에 있는 케릭터 offset */
