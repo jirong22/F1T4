@@ -31,3 +31,63 @@
     bottom: 10px;
     right: 30px;
   }
+
+
+.comment-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.comment-profile {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.comment-profile img {
+  width: 300px;
+  height: 300px;
+}
+
+.comment-details {
+  flex: 1;
+}
+
+.comment-detail-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.comment-content.detail-content {
+  word-break: break-word;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.detail-content p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mb-3.button {
+  display: flex;
+  gap: 10px;
+}
+
+.mb-3.button .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.mb-3.button .btn:hover {
+  opacity: 0.8;
+}
