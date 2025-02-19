@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F1B4</title>
+    <title>F1T4</title>
 
     <!-- 부트스트랩 import -->
     <link
@@ -19,6 +19,9 @@
 
     <!-- 스타일 태그 분리 -->
     <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Favicon 추가 -->
+    <link rel="icon" href="./assets/favicon.ico" />
   </head>
 
   <body>
@@ -34,7 +37,6 @@
         <!-- 현재 날짜 & 현재 상태 -->
         <div class="status-container">
           <span class="team-status" id="current-date"></span>
-          <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
         </div>
       </div>
 
@@ -107,15 +109,25 @@
         </div>
         <div class="teamdt-bg">
           <div class="teamdt-content">
-            <div class="image-box d-flex align-items-center" id="team-member-img"></div>
+            <div
+              class="image-box d-flex align-items-center"
+              id="team-member-img"
+            ></div>
             <div class="form-container">
-              <input type="text" class="form-control-name" placeholder="이름" id="team-member-name"/>
+              <input
+                type="text"
+                class="form-control-name"
+                placeholder="이름"
+                id="team-member-name"
+              />
               <textarea
                 class="form-control-dt"
                 rows="8"
                 placeholder="상세정보"
                 id="team-member-details"
-                >기본입니다</textarea>
+              >
+기본입니다</textarea
+              >
               <div class="buttons mb-3">
                 <button class="btn-success" id="team-link1"></button>
                 <button class="btn-info" id="team-link2"></button>
@@ -185,27 +197,7 @@
           <!-- 방명록 목록 -->
           <div class="guestbook-list col-md-8">
             <!-- 댓글 리스트 -->
-            <div class="comments-list">
-              <div class="comment-item">
-                <div class="comment-header">
-                  <strong class="commenter-name">홍길동</strong>
-                  <span class="comment-date">2024.03.19</span>
-                </div>
-                <div class="comment-content">
-                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
-                </div>
-              </div>
-
-              <div class="comment-item">
-                <div class="comment-header">
-                  <strong class="commenter-name">김철수</strong>
-                  <span class="comment-date">2024.03.19</span>
-                </div>
-                <div class="comment-content">
-                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
-                </div>
-              </div>
-            </div>
+            <div class="comments-list"></div>
           </div>
           <button type="button" class="btn btn-outline-primary openbtn">
             우리 팀을 응원해주세요 ❗️
@@ -216,6 +208,8 @@
 
     <!-- 모달 백그라운드 -->
     <div class="modal-bg"></div>
+    <!-- 응원 문구 상세 모달 부분-->
+    <div class="modal-content detailmodal"></div>
     <!-- 응원 문구 작성 모달 부분 -->
     <!-- css에서 .cheercomment로 쓰면 됨 -->
     <div class="modal-content cheercomment" id="cheercomment">

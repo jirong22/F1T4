@@ -5,7 +5,7 @@ import {
   addDoc,
   Timestamp,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { getDocs, getDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTq2hFNBSkqZwNQ4ZWzvM0vM8s5p9yMsQ",
@@ -34,9 +34,11 @@ $(".postingbtn").click(async function () {
   window.location.reload();
 });
 
+// 응원 문구 리스트 조회
 let docs = await getDocs(collection(db, "comments"));
 docs.forEach((doc) => {
   let row = doc.data();
+  let docId = doc.id;
 
   let image = row["image"];
   let name = row["name"];
@@ -50,7 +52,7 @@ docs.forEach((doc) => {
   const formattedDate = `${year}.${month}.${day}`;
 
   let temp_html = `
-  <div class="comment-item">
+  <div class="comment-item" data-id="${docId}">
     <div class="comment-header">
       <img src="${image}">
       <strong class="commenter-name">${name}</strong>
@@ -64,18 +66,48 @@ docs.forEach((doc) => {
   $(".comments-list").append(temp_html);
 });
 
-$(".openbtn").click(openModal);
-$(".closebtn").click(closeModal);
+// 상세 응원 문구 조회
+$('.comments-list').on('click', '.comment-item', async function () {
+  const docId = $(this).data('id');
 
+  const docSnap = await getDoc(doc(db, "comments", docId));
 
-function openModal() {
+  if (docSnap.exists()) {
+    const data = docSnap.data();
+    showDetailPage(data, docId);
+  }
+})
+
+// 상세 응원 문구 삭제
+$('.modal-content').on('click', '.deletebtn', async function () {
+  const docId = $(this).data('id');
+
+  const docRef = doc(db, "comments", docId);
+  await deleteDoc(docRef);
+  alert('삭제 완료!');
+  closeModal();
+  window.location.reload();
+})
+
+$('.openbtn').click(function () {
+  openModal(".cheercomment");
+});
+
+$('.closebtn').click(closeModal);
+
+// 상세 응원 문구 닫기
+$(document).on('click', '.closebtn', function () {
+  closeModal();
+})
+
+function openModal(modalSelector) {
   const scrollY = $(window).scrollTop();
   const windowHeight = $(window).height();
 
   const modalTop = scrollY + windowHeight / 2;
 
   $(".modal-bg").css("display", "block");
-  $(".modal-content").css({
+  $(modalSelector).css({
     display: "block",
     top: `${modalTop}px`,
     transform: "translate(-50%, -50%)",
@@ -88,4 +120,36 @@ function closeModal() {
   $(".modal-content").css("display", "none");
   $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
+}
+
+function showDetailPage(data, docId) {
+  const date = data.createdTime.toDate();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const formattedDate = `${year}.${month}.${day}`;
+
+  let detailHtml = `
+  <div class="comment-container">
+    <div class="comment-profile">
+      <img src="${data.image}" alt="이미지">
+      <strong class="commenter-name">${data.name}</strong>
+    </div>
+    <div class="comment-details">
+      <div class="comment-detail-header">
+        <span class="comment-date">${formattedDate}</span>
+      </div>
+      <div class="comment-content detail-content">
+        <p>${data.content}</p>
+      </div>
+      <div class="mb-3 button">
+        <button type="button" class="btn btn-light deletebtn" data-id="${docId}">삭제</button>
+        <button type="button" class="btn btn-dark closebtn">닫기</button>
+      </div>
+    </div>
+  </div>
+  `;
+
+  $('.modal-content.detailmodal').html(detailHtml);
+  openModal(".modal-content.detailmodal");
 }
