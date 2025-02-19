@@ -63,6 +63,7 @@ docs.forEach((doc) => {
 $('.openbtn').click(openModal);
 $('.closebtn').click(closeModal);
 
+
 function openModal() {
   const scrollY = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -81,4 +82,5 @@ function openModal() {
 function closeModal() {
   $(".modal-bg").css("display", "none");
   $(".modal-content").css("display", "none");
+  $(".teamdt-bg").css("display", "none");
 }
