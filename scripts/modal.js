@@ -4,6 +4,8 @@ import {
   collection,
   addDoc,
   Timestamp,
+  query,
+  orderBy
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getDocs, getDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
@@ -35,7 +37,8 @@ $(".postingbtn").click(async function () {
 });
 
 // 응원 문구 리스트 조회
-let docs = await getDocs(collection(db, "comments"));
+let q = query(collection(db, "comments"), orderBy("createdTime", "desc"));
+let docs = await getDocs(q);
 docs.forEach((doc) => {
   let row = doc.data();
   let docId = doc.id;
