@@ -15,6 +15,10 @@
 
     <!-- 스타일 태그 분리 -->
     <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Favicon 추가 -->
+    <link rel="icon" href="./assets/favicon.ico" />
+
   </head>
 
   <body>
@@ -29,8 +33,8 @@
         </h1>
         <!-- 현재 날짜 & 현재 상태 -->
         <div class="status-container">
-          <span class="team-status" id="current-date"></span>
-          <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
+          <span class="current-date" id="current-date"></span>
+          <span class="team-status" id="tema-status"></span>
         </div>
       </div>
     </div>
@@ -96,28 +100,35 @@
             />
           </li>
         </ul>
-
+        <div class="sepa-bg"></div>
         <div class="teamdt-bg">
           <div class="teamdt-content">
-            <div class="image-box d-flex align-items-center"></div>
+            <div
+              class="image-box d-flex align-items-center"
+              id="team-member-img"
+            ></div>
             <div class="form-container">
-              <input type="text" class="form-control-name" placeholder="이름" />
+              <input
+                type="text"
+                class="form-control-name"
+                placeholder="이름"
+                id="team-member-name"
+              />
               <textarea
                 class="form-control-dt"
                 rows="8"
                 placeholder="상세정보"
-              ></textarea>
+                id="team-member-details">
+                기본입니다</textarea>
               <div class="buttons mb-3">
-                <button class="btn-success"></button>
-                <button class="btn-info"></button>
+                <button class="btn-success" id="team-link1"></button>
+                <button class="btn-info" id="team-link2"></button>
                 <button class="btn-danger closebtn">닫기</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
+      </section>
 
       <!-- 목표와 약속 섹션 -->
       <section class="goals-promise" id="goals-promise">
@@ -126,9 +137,9 @@
           <div class="left-sec">
             <!--약속-->
             <div class="desc-promise">
-              <div class="desc-item" data-key="a1">
-                <span>약속</span>
-                <p>Here you could describe the detail if you need it</p>
+              <div class="desc-item" data-key="a3">
+                <span>약속 1</span>
+                <p>시간 약속을 철저히 지키겠습니다</p>
               </div>
               <div class="desc-item" data-key="b3">
                 <span>약속 2</span>
@@ -152,21 +163,20 @@
 
             <!-- 오른쪽 (목표) -->
             <div class="desc-goal">
-              <div class="desc-item" data-key="b1">
-                <span>목표</span>
-                <p>Here you could describe the detail if you need it</p>
-              </div>
               <div class="desc-item" data-key="b2">
-                <span>목표</span>
-                <p>Here you could describe the detail if you need it</p>
+                <span>목표 1</span>
+                <p>TIL 남은날까지 맨날 쓰기</p>
               </div>
-              <div class="desc-item" data-key="b3">
-                <span>목표</span>
-                <p>Here you could describe the detail if you need it</p>
+              <div class="desc-item" data-key="a2">
+                <span>목표 2</span>
+                <p>매일 일정 소화하기 부끄러워도 물어보기</p>
+              </div>
+              <div class="desc-item" data-key="b1">
+                <span>목표 3</span>
+                <p>이번 프로젝트 포트폴리오로 사용하기</p>
               </div>
             </div>
           </div>
-        </div>
 
         <div class="right-sec">
           <!-- 오른쪽 원형 메뉴 -->
@@ -203,27 +213,11 @@
           <div class="col-8 guestbook-list">
             <!-- 댓글 리스트 -->
             <div class="comments-list">
-              <div class="comment-item">
-                <div class="comment-header">
-                  <strong class="commenter-name">홍길동</strong>
-                  <span class="comment-date">2024.03.19</span>
-                </div>
-                <div class="comment-content">
-                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
-                </div>
-              </div>
-
-              <div class="comment-item">
-                <div class="comment-header">
-                  <strong class="commenter-name">김철수</strong>
-                  <span class="comment-date">2024.03.19</span>
-                </div>
-                <div class="comment-content">
-                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
-                </div>
-              </div>
             </div>
           </div>
+          <button type="button" class="btn btn-outline-primary openbtn">
+            우리 팀을 응원해주세요 ❗️
+          </button>
         </div>
       </div>
 
@@ -231,42 +225,43 @@
 
   </main>
 
-    <!-- 모달 백그라운드 -->
-    <div class="modal-bg"></div>
-    <!-- 응원 문구 작성 모달 부분 -->
-    <!-- css에서 .cheercomment로 쓰면 됨 -->
-    <div class="modal-content cheercomment" id="cheercomment">
-      <div class="mb-3">
-        <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
-        <div class="form-floating mb-3 image">
-          <input
-            type="text"
-            class="form-control"
-            id="image"
-            placeholder="image"
-          />
-          <label for="image">이미지 주소</label>
-        </div>
-        <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
-        <div class="form-floating mb-3 name">
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="name"
-          />
-          <label for="name">이름</label>
-        </div>
-        <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
-        <div class="form-floating content">
-          <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
-            id="content"
-            style="height: 200px"
-          ></textarea>
-          <label for="content">응원 내용</label>
-        </div>
+  <!-- 모달 백그라운드 -->
+  <div class="modal-bg"></div>
+  <!-- 응원 문구 상세 모달 부분-->
+  <div class="modal-content detailmodal"></div>
+  <!-- 응원 문구 작성 모달 부분 -->
+  <!-- css에서 .cheercomment로 쓰면 됨 -->
+  <div class="modal-content cheercomment" id="cheercomment">
+    <div class="mb-3">
+      <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
+      <div class="form-floating mb-3 image">
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          placeholder="image"
+        />
+        <label for="image">이미지 주소</label>
+      </div>
+      <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+      <div class="form-floating mb-3 name">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="name"
+        />
+        <label for="name">이름</label>
+      </div>
+      <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+      <div class="form-floating content">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="content"
+          style="height: 200px"
+        ></textarea>
+        <label for="content">응원 내용</label>
       </div>
     </div>
     <!-- css에서 .button 부분 -->
