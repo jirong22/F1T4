@@ -38,6 +38,7 @@
         </div>
       </div>
     </div>
+    </div>
 
     <div class="divider"></div>
 
@@ -178,17 +179,35 @@
             </div>
           </div>
 
-        <div class="right-sec">
-          <!-- 오른쪽 원형 메뉴 -->
-          <div class="circle-menu">
-            <div class="circle-item" data-key="a1">💡</div>
-            <div class="circle-item" data-key="b1">⏰</div>
-            <div class="circle-item" data-key="a2">💌</div>
-            <div class="circle-item" data-key="b2">📋</div>
-            <div class="circle-item" data-key="a3">📖</div>
-            <div class="circle-item" data-key="b3">📝</div>
+        <!-- 오른쪽 (목표) -->
+        <div class="desc-goal">
+          <div class="desc-item" data-key="b1">
+            <span>목표</span>
+            <p>Here you could describe the detail if you need it</p>
+          </div>
+          <div class="desc-item" data-key="b2">
+            <span>목표</span>
+            <p>Here you could describe the detail if you need it</p>
+          </div>
+          <div class="desc-item" data-key="b3">
+            <span>목표</span>
+            <p>Here you could describe the detail if you need it</p>
           </div>
         </div>
+      </div>
+      </div>
+
+      <div class="right-sec">
+        <!-- 오른쪽 원형 메뉴 -->
+        <div class="circle-menu">
+          <div class="circle-item" data-key="a1">💡</div>
+          <div class="circle-item" data-key="b1">⏰</div>
+          <div class="circle-item" data-key="a2">💌</div>
+          <div class="circle-item" data-key="b2">📋</div>
+          <div class="circle-item" data-key="a3">📖</div>
+          <div class="circle-item" data-key="b3">📝</div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -196,31 +215,43 @@
     <section class="guestbook" id="guestbook">
       <div class="container">
         <div class="row">
-          <div class="col-3 team-members">
-            <h1>응원하기</h1>
-            <h2>F1T4 구성</h2>
-            <ul>
-              <li>박지연</li>
-              <li>백수린</li>
-              <li>김현우</li>
-              <li>백수린</li>
-              <li>안유빈</li>
-              <li>임재영</li>
-            </ul>
+          <div class="col-lg-3 team-members d-flex flex-column align-items-center">
+            <h1>응원하기ꯁ</h1>
           </div>
 
           <!-- 방명록 목록 -->
           <div class="col-8 guestbook-list">
-            <!-- 댓글 리스트 -->
             <div class="comments-list">
+              <!-- 댓글 리스트 -->
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">홍길동</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
+                </div>
+              </div>
+
+              <div class="comment-item">
+                <div class="comment-header">
+                  <strong class="commenter-name">김철수</strong>
+                  <span class="comment-date">2024.03.19</span>
+                </div>
+                <div class="comment-content">
+                  <p>모두가 힘을 합쳐 멋진 프로젝트 만들어내길 바랍니다! ✨</p>
+                </div>
+              </div>
             </div>
           </div>
-          <button type="button" class="btn btn-outline-primary openbtn">
-            우리 팀을 응원해주세요 ❗️
-          </button>
+          <!-- 응원하기 버튼 -->
+          <div class="button-container">
+            <button type="button" class="btn btn-outline-primary openbtn">
+              우리 팀을 응원해주세요 ❗️
+            </button>
+          </div>
         </div>
       </div>
-
     </section>
 
   </main>
@@ -233,44 +264,24 @@
   <!-- css에서 .cheercomment로 쓰면 됨 -->
   <div class="modal-content cheercomment" id="cheercomment">
     <div class="mb-3">
-      <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
-      <div class="form-floating mb-3 image">
-        <input
-          type="text"
-          class="form-control"
-          id="image"
-          placeholder="image"
-        />
-        <label for="image">이미지 주소</label>
-      </div>
       <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
       <div class="form-floating mb-3 name">
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          placeholder="name"
-        />
+        <input type="text" class="form-control" id="name" placeholder="name">
         <label for="name">이름</label>
       </div>
+
       <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
       <div class="form-floating content">
-        <textarea
-          class="form-control"
-          placeholder="Leave a comment here"
-          id="content"
-          style="height: 200px"
-        ></textarea>
+        <textarea class="form-control" placeholder="Leave a comment here" id="content" style="height: 200px"></textarea>
         <label for="content">응원 내용</label>
       </div>
     </div>
-    <!-- css에서 .button 부분 -->
-    <div class="mb-3 button">
-      <button type="button" class="btn btn-light postingbtn">등록</button>
-      <button type="button" class="btn btn-dark closebtn">닫기</button>
-    </div>
+  <!-- css에서 .button 부분 -->
+  <div class="mb-3 button">
+    <button type="button" class="btn btn-light postingbtn">등록</button>
+    <button type="button" class="btn btn-dark closebtn">닫기</button>
   </div>
-
+  
   <!-- 현재 날짜 출력 스크립트 -->
   <script src="./scripts/curdate.js"></script>
 </body>
