@@ -1,0 +1,82 @@
+.teamdt-bg {/*최상위*/
+    position: fixed;
+    width: 500%;
+    height: 500%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .teamdt-content {
+    background-image: url('../assets/gridgray.png');
+    background-position: center;
+    background-size: cover;
+    opacity:0.92;
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    width: 1080px;
+    height: 600px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .image-box {
+    background-image: url('http://www.lookmedia.co.kr/files/gallery/TG2.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin: 50px 70px 0px 50px;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .form-container {
+    flex-grow: 1;
+    width: 500px;
+    margin: 80px 40px 40px 0px;
+  }
+  .form-control-name {
+    flex-grow: 1;
+    width: 300px;
+    margin: 10px 10px 10px 15px;
+    font-size: 30px;
+  }
+  .form-control-dt {
+    flex-grow: 1;
+    width: 550px;
+    height: 270px;
+    margin: 10px 10px 10px 0px;
+    font-size: 25px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+  .btn-success {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-radius: 100%;
+  }.btn-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-radius: 100%;
+  }

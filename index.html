@@ -62,22 +62,36 @@
       <!-- 팀원 섹션 -->
       <section class="teams" id="teams">
         <ul>
-          <li class="team-member" data-mbti="ENTP">
-            <img class="intj" src="./assets/intj.png" />
+          <li class="team-member" data-mbti="INTJ">
+            <img class="intj" src="./assets/intj.png" id="intj-img" alt="INTJ"/>
           </li>
           <li class="team-member" data-mbti="ESTJ">
-            <img class="estj" src="./assets/estj.png" />
+            <img class="estj" src="./assets/estj.png" id="estj-img" alt="ESTJ"/>
           </li>
           <li class="team-member" data-mbti="INFP">
-            <img class="infp" src="./assets/infp.png" />
-          </li>
-          <li class="team-member" data-mbti="INTJ">
-            <img class="istj" src="./assets/istj.png" />
+            <img class="infp" src="./assets/infp.png" id="infp-img" alt="INFP"/>
           </li>
           <li class="team-member" data-mbti="ISTJ">
-            <img class="entp" src="./assets/entp.png" />
+            <img class="istj" src="./assets/istj.png" id="istj-img" alt="ISTJ"/>
+          </li>
+          <li class="team-member" data-mbti="ENTP">
+            <img class="entp" src="./assets/entp.png" id="entp-img" alt="ENTP"/>
           </li>
         </ul>
+        <div class="teamdt-bg">
+          <div class="teamdt-content">
+            <div class="image-box d-flex align-items-center"></div>
+            <div class="form-container">
+              <input type="text" class="form-control-name" placeholder="이름">
+              <textarea class="form-control-dt" rows="8" placeholder="상세정보"></textarea>
+              <div class="buttons mb-3">
+                <button class="btn-success"></button>
+                <button class="btn-info"></button>
+                <button class="btn-danger closebtn">닫기</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- 목표와 약속 섹션 -->
