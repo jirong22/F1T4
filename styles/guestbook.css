@@ -1,4 +1,26 @@
-.guestbook {
+#guestbook {
+  background-color: #f8f9fa; /* 부드러운 배경색 */
+  padding: 50px 20px; /* 충분한 여백 */
+  border-radius: 15px; /* 모서리 둥글게 처리 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: flex; /* 최대 너비 자동 제한 */
+  margin: auto; /* 중앙 정렬 */
+  overflow: hidden; /* 내용이 넘치지 않게 처리 */
+  display: flex; /*  레이아웃 설정 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  justify-content: space-between; /* 여백 분배 */
+  height: 00pxflex; /* 고정 높이 자동 */
+}
+
+#guestbook h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: auto;
+  margin-bottom: 80px;
+  font-weight: bold;
+}
+
+.guestbook-list {
   display: flex;
   align-items: center;
   text-align: center;
@@ -62,16 +84,14 @@
 .comment-content p {
   font-size: 1.2rem;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.6; /* 줄 간격  */
 }
 
-/* button-container 스타일 */
-.button-container {
-  display: flex;
-  justify-content: left;
-  gap: 15px;
-  width: 100%;
-  margin-top: 15px;  /* 버튼과 다른 내용 사이 간격 */
+.comment-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 button {
@@ -83,6 +103,7 @@ button {
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease; /* 버튼 호버 시 색상 변환 */
+  align-self: flex-end; /* 버튼을 하단 우측에 배치 */
 }
 
 button:hover {
@@ -93,3 +114,14 @@ button:focus {
   outline: none; /* 버튼 클릭 시 테두리 없애기 */
 }
 
+.guestbook .container {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}

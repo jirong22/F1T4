@@ -1,25 +1,53 @@
+.sepa-bg {/*분리공간*/
+  width: 125%;
+  height: 143%;
+  position: absolute;
+  margin: 0%;
+  background: rgba(0, 0, 0, 0.13);
+  z-index: 90;
+  display: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 35px 15px rgba(0, 0, 0, 0.2);
+  
+  opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.sepa-bg.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .teamdt-bg {/*최상위*/
     position: fixed;
     width: 500%;
     height: 500%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.0);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    box-shadow: 20px 20px 30px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .teamdt-bg.hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .teamdt-content {
     background-image: url('../assets/gridgray.png');
     background-position: center;
     background-size: cover;
-    opacity:0.92;
+    opacity:0.95;
     padding: 20px;
     position: fixed;
     display: flex;
     width: 1080px;
     height: 600px;
-    z-index: 1000;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
@@ -35,6 +63,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f8f9fa;
+    border-radius: 10px;
     margin: 50px 70px 0px 50px;
   }
 
@@ -55,6 +84,7 @@
     width: 300px;
     margin: 10px 10px 10px 15px;
     font-size: 30px;
+    border-radius: 5px;
   }
   .form-control-dt {
     flex-grow: 1;
@@ -62,6 +92,7 @@
     height: 270px;
     margin: 10px 10px 10px 0px;
     font-size: 25px;
+    border-radius: 10px;
   }
 
   .buttons {
@@ -80,3 +111,4 @@
     padding: 20px 20px;
     border-radius: 100%;
   }
+

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>F1B4</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1B4</title>
 
   <!-- 부트스트랩 import -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,24 +13,25 @@
 
   <script type="module" src="./scripts/main.js"></script>
 
-  <!-- 스타일 태그 분리 -->
-  <link rel="stylesheet" href="./styles/main.css"/>
-</head>
+    <!-- 스타일 태그 분리 -->
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
 
-<body>
-  <!-- 헤더 섹션 -->
-  <header class="p-3 text-bg-dark">
-    <div class="nav-header">
-      <h1 class="team-title">
-        <span class="highlight">F</span>
-        <span class="highlight">1</span>
-        <span class="highlight">T</span>
-        <span class="highlight">4</span>
-      </h1>
-      <!-- 현재 날짜 & 현재 상태 -->
-      <div class="status-container">
-        <span class="team-status" id="current-date"></span>
-        <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="p-3 text-bg-dark">
+      <div class="nav-header">
+        <h1 class="team-title">
+          <span class="highlight">F</span>
+          <span class="highlight">1</span>
+          <span class="highlight">T</span>
+          <span class="highlight">4</span>
+        </h1>
+        <!-- 현재 날짜 & 현재 상태 -->
+        <div class="status-container">
+          <span class="team-status" id="current-date"></span>
+          <span class="team-status">📌 지금 우리 팀원들은? : 개인 학습 중</span>
+        </div>
       </div>
     </div>
 
@@ -50,34 +50,68 @@
     </div>
   </header>
 
-  <!-- 본문 섹션 -->
-  <main>
-    <!-- 팀원 섹션 -->
-    <section class="teams" id="teams">
-      <ul>
-        <li class="team-member" data-mbti="INTJ">
-          <img class="intj" src="./assets/intj.png" />
-        </li>
-        <li class="team-member" data-mbti="ESTJ">
-          <img class="estj" src="./assets/estj.png" id="estj-img" alt="ESTJ" />
-        </li>
-        <li class="team-member" data-mbti="INFP">
-          <img class="infp" src="./assets/infp.png" id="infp-img" alt="INFP" />
-        </li>
-        <li class="team-member" data-mbti="ENTP">
-          <img class="entp" src="./assets/entp.png" />
-        </li>
-      </ul>
-      <div class="teamdt-bg">
-        <div class="teamdt-content">
-          <div class="image-box d-flex align-items-center"></div>
-          <div class="form-container">
-            <input type="text" class="form-control-name" placeholder="이름" />
-            <textarea class="form-control-dt" rows="8" placeholder="상세정보"></textarea>
-            <div class="buttons mb-3">
-              <button class="btn-success"></button>
-              <button class="btn-info"></button>
-              <button class="btn-danger closebtn">닫기</button>
+    <!-- 본문 섹션 -->
+    <main>
+      <!-- 팀원 섹션 -->
+      <section class="teams" id="teams">
+        <ul>
+          <li class="team-member" data-mbti="INTJ">
+            <img
+              class="intj"
+              src="./assets/intj.png"
+              id="intj-img"
+              alt="INTJ"
+            />
+          </li>
+          <li class="team-member" data-mbti="ESTJ">
+            <img
+              class="estj"
+              src="./assets/estj.png"
+              id="estj-img"
+              alt="ESTJ"
+            />
+          </li>
+          <li class="team-member" data-mbti="INFP">
+            <img
+              class="infp"
+              src="./assets/infp.png"
+              id="infp-img"
+              alt="INFP"
+            />
+          </li>
+          <li class="team-member" data-mbti="ENTP">
+            <img
+              class="entp"
+              src="./assets/entp.png"
+              id="entp-img"
+              alt="ENTP"
+            />
+          </li>
+          <li class="team-member" data-mbti="ISTJ">
+            <img
+              class="istj"
+              src="./assets/istj.png"
+              id="istj-img"
+              alt="ISTJ"
+            />
+          </li>
+        </ul>
+
+        <div class="teamdt-bg">
+          <div class="teamdt-content">
+            <div class="image-box d-flex align-items-center"></div>
+            <div class="form-container">
+              <input type="text" class="form-control-name" placeholder="이름" />
+              <textarea
+                class="form-control-dt"
+                rows="8"
+                placeholder="상세정보"
+              ></textarea>
+              <div class="buttons mb-3">
+                <button class="btn-success"></button>
+                <button class="btn-info"></button>
+                <button class="btn-danger closebtn">닫기</button>
+              </div>
             </div>
           </div>
         </div>
@@ -85,40 +119,42 @@
       </div>
     </section>
 
-    <!-- 목표와 약속 섹션 -->
-    <section class="goals-promise" id="goals-promise">
-      <div class="layout-container">
-        <!-- 왼쪽 1/2 (약속+목표) -->
-        <div class="left-sec">
-          <!--약속-->
-          <div class="desc-promise">
-            <div class="desc-item" data-key="a1">
-              <span>약속</span>
-              <p>Here you could describe the detail if you need it</p>
-            </div>
-            <div class="desc-item" data-key="a2">
-              <span>약속</span>
-              <p>Here you could describe the detail if you need it</p>
-            </div>
-            <div class="desc-item" data-key="a3">
-              <span>약속</span>
-              <p>Here you could describe the detail if you need it</p>
+      <!-- 목표와 약속 섹션 -->
+      <section class="goals-promise" id="goals-promise">
+        <div class="layout-container">
+          <!-- 왼쪽 1/2 (약속+목표) -->
+          <div class="left-sec">
+            <!--약속-->
+            <div class="desc-promise">
+              <div class="desc-item" data-key="a1">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="a2">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="a3">
+                <span>약속</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
             </div>
           </div>
 
-          <!-- 오른쪽 (목표) -->
-          <div class="desc-goal">
-            <div class="desc-item" data-key="b1">
-              <span>목표</span>
-              <p>Here you could describe the detail if you need it</p>
-            </div>
-            <div class="desc-item" data-key="b2">
-              <span>목표</span>
-              <p>Here you could describe the detail if you need it</p>
-            </div>
-            <div class="desc-item" data-key="b3">
-              <span>목표</span>
-              <p>Here you could describe the detail if you need it</p>
+            <!-- 오른쪽 (목표) -->
+            <div class="desc-goal">
+              <div class="desc-item" data-key="b1">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="b2">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
+              <div class="desc-item" data-key="b3">
+                <span>목표</span>
+                <p>Here you could describe the detail if you need it</p>
+              </div>
             </div>
           </div>
         </div>
@@ -167,7 +203,7 @@
                   <p>파이팅하세요! 좋은 결과 있을 거예요 💪</p>
                 </div>
               </div>
-    
+
               <div class="comment-item">
                 <div class="comment-header">
                   <strong class="commenter-name">김철수</strong>
@@ -178,11 +214,6 @@
                 </div>
               </div>
             </div>
-            <div class="float-end">
-              <button type="button" class="btn btn-outline-primary openbtn">
-                우리 팀을 응원해주세요 ❗️
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -191,26 +222,42 @@
 
   </main>
 
-  <!-- 모달 백그라운드 -->
-  <div class="modal-bg"></div>
-  <!-- 응원 문구 작성 모달 부분 -->
-  <!-- css에서 .cheercomment로 쓰면 됨 -->
-  <div class="modal-content cheercomment" id="cheercomment">
-    <div class="mb-3">
-      <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
-      <div class="form-floating mb-3 image">
-        <input type="text" class="form-control" id="image" placeholder="image" />
-        <label for="image">이미지 주소</label>
-      </div>
-      <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
-      <div class="form-floating mb-3 name">
-        <input type="text" class="form-control" id="name" placeholder="name" />
-        <label for="name">이름</label>
-      </div>
-      <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
-      <div class="form-floating content">
-        <textarea class="form-control" placeholder="Leave a comment here" id="content" style="height: 200px"></textarea>
-        <label for="content">응원 내용</label>
+    <!-- 모달 백그라운드 -->
+    <div class="modal-bg"></div>
+    <!-- 응원 문구 작성 모달 부분 -->
+    <!-- css에서 .cheercomment로 쓰면 됨 -->
+    <div class="modal-content cheercomment" id="cheercomment">
+      <div class="mb-3">
+        <!-- css에서 .image로 쓰면 됨. 필요 없다면 image는 삭제 가능 -->
+        <div class="form-floating mb-3 image">
+          <input
+            type="text"
+            class="form-control"
+            id="image"
+            placeholder="image"
+          />
+          <label for="image">이미지 주소</label>
+        </div>
+        <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+        <div class="form-floating mb-3 name">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="name"
+          />
+          <label for="name">이름</label>
+        </div>
+        <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+        <div class="form-floating content">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="content"
+            style="height: 200px"
+          ></textarea>
+          <label for="content">응원 내용</label>
+        </div>
       </div>
     </div>
     <!-- css에서 .button 부분 -->
