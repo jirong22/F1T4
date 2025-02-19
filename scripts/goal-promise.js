@@ -1,13 +1,13 @@
 /* 기본 세팅 */
-document.addEventListener("DOMContentLoaded", () => { // 이벤트리스너는 html 로드된 후, javascript가 실행
+document.addEventListener("DOMContentLoaded", () => { // 이벤트리스너 - html 로드된 후, javascript가 실행
     const circleItems = document.querySelectorAll(".circle-item");
 
     circleItems.forEach((item) => {
-        // 현재 적용된 transform 값을 가져와서 저장
+        // 초기 transform 값을 가져와서 아래처럼 저장하기 !
         item.dataset.originalTransform = window.getComputedStyle(item).transform;
     });
 
-    console.log("원래 위치 저장 완료:", circleItems);
+    console.log("원래 위치 저장:", circleItems);
 
     const descItems = document.querySelectorAll(".desc-item"); // 써클아이템과 설명아이템을 불러온다
 
@@ -52,6 +52,6 @@ document.addEventListener("DOMContentLoaded", () => { // 이벤트리스너는 h
 
     /* 다른 곳(페이지의 아무곳) 클릭하면 초기화 */
     document.addEventListener("click", () => {
-        removeActiveStates();
+        removeActiveStates(); // 위에 초기화면 세팅으로!!
     });
 });
