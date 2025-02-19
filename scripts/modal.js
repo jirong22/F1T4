@@ -1,6 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { collection, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+  Timestamp,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -9,40 +13,40 @@ const firebaseConfig = {
   projectId: "f1t4-6064d",
   storageBucket: "f1t4-6064d.firebasestorage.app",
   messagingSenderId: "30705356137",
-  appId: "1:30705356137:web:39025d623c71115287c1f8"
+  appId: "1:30705356137:web:39025d623c71115287c1f8",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-$('.postingbtn').click(async function () {
-  let image = $('#image').val();
-  let name = $('#name').val();
-  let content = $('#content').val();
+$(".postingbtn").click(async function () {
+  let image = $("#image").val();
+  let name = $("#name").val();
+  let content = $("#content").val();
   let doc = {
-    'image': image,
-    'name': name,
-    'content': content,
-    'createdTime': Timestamp.fromDate(new Date())
+    image: image,
+    name: name,
+    content: content,
+    createdTime: Timestamp.fromDate(new Date()),
   };
   await addDoc(collection(db, "comments"), doc);
-  alert('저장 완료!');
+  alert("저장 완료!");
   window.location.reload();
-})
+});
 
 let docs = await getDocs(collection(db, "comments"));
 docs.forEach((doc) => {
   let row = doc.data();
 
-  let image = row['image'];
-  let name = row['name'];
-  let content = row['content'];
-  let createdTime = row['createdTime'];
+  let image = row["image"];
+  let name = row["name"];
+  let content = row["content"];
+  let createdTime = row["createdTime"];
 
   const date = createdTime.toDate();
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   const formattedDate = `${year}.${month}.${day}`;
 
   let temp_html = `
@@ -57,11 +61,11 @@ docs.forEach((doc) => {
     </div>
   </div>
   `;
-  $('.comments-list').append(temp_html);
-})
+  $(".comments-list").append(temp_html);
+});
 
-$('.openbtn').click(openModal);
-$('.closebtn').click(closeModal);
+$(".openbtn").click(openModal);
+$(".closebtn").click(closeModal);
 
 function openModal() {
   const scrollY = $(window).scrollTop();
