@@ -1,4 +1,3 @@
-
 fetch('./assets/team_data.txt')
   .then(response => response.text())
   .then(data => {
@@ -31,11 +30,83 @@ fetch('./assets/team_data.txt')
           document.getElementById('team-link2').addEventListener('click', function() {
             window.open(link2, "_blank");
           });
-          
+          document.querySelector('.sepa-bg').style.display = 'flex';
           document.querySelector('.teamdt-bg').style.display = 'flex';
-          
         }
       });
     });
   })
   .catch(err => console.error('팀원 데이터 로드 실패:', err));
+
+// 모달 요소 및 모달 내용
+
+
+
+$(window).scroll(function() {
+  // 페이지 스크롤 위치가 300px 이상일 때 모달을 서서히 숨기기
+  if ($(this).scrollTop() > 300) {
+    $(".teamdt-bg").addClass("hidden");  // hidden 클래스를 추가하여 서서히 숨기기
+    $(".sepa-bg").addClass("hidden");
+    $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "translateX(0)"); // 캐릭터도 제자리로
+    setTimeout(function() { // 500ms 가 지나면
+      $(".teamdt-bg").css("display", "none");
+      $(".sepa-bg").css("display", "none");
+      $(".teamdt-bg").removeClass("hidden");  // hidden 클래스삭제
+    $(".sepa-bg").removeClass("hidden");
+    }, 500);
+  }
+});
+
+$(document).ready(function() {
+  // 이미지 클릭 시 해당하는 MBTI에 맞는 변환 애니메이션 적용
+  $(".team-member img").click(function() {
+    const mbti = $(this).attr("alt"); // 클릭된 이미지의 alt 값으로 MBTI 가져오기
+    
+    // 각 MBTI에 맞는 translateX 값 적용
+    switch (mbti) {
+      case "INTJ":
+        $("#intj-img").css("transform", "translateX(-400px)");
+        break;
+      case "ESTJ":
+        $("#estj-img").css("transform", "translateX(-600px)");
+        break;
+      case "INFP":
+        $("#infp-img").css("transform", "translateX(-750px)");
+        break;
+      case "ISTJ":
+        $("#istj-img").css("transform", "translateX(-1100px)");
+        break;
+      case "ENTP":
+        $("#entp-img").css("transform", "translateX(-900px)");
+        break;
+      default:
+        break;
+    }
+
+
+    $(".closebtn").click(function() {
+      // 이미지를 원위치로 돌아가게 설정
+      $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "translateX(0)");
+  
+    });
+  });
+
+});
+
+/* #intj-img {
+  transform: translateX(-950px);
+}
+#istj-img {
+  transform: translateX(-900px);
+}
+#estj-img {
+  transform: translateX(-600px);
+}
+#entp-img {
+  transform: translateX(-1100px);
+}
+#infp-img {
+  transform: translateX(-750px);
+} */
+/* 캐릭터-모달창 띄울 시 화면 왼쪽에 있는 케릭터 offset */
+

@@ -86,5 +86,6 @@ function openModal() {
 function closeModal() {
   $(".modal-bg").css("display", "none");
   $(".modal-content").css("display", "none");
+  $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
 }
