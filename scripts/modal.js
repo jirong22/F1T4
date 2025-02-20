@@ -21,12 +21,12 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// 응원 문구 등록 (create)
 $(".postingbtn").click(async function () {
-  let image = $("#image").val();
   let name = $("#name").val();
   let content = $("#content").val();
   let doc = {
-    image: image,
     name: name,
     content: content,
     createdTime: Timestamp.fromDate(new Date()),
@@ -36,14 +36,13 @@ $(".postingbtn").click(async function () {
   window.location.reload();
 });
 
-// 응원 문구 리스트 조회
+// 응원 문구 리스트 조회 (read)
 let q = query(collection(db, "comments"), orderBy("createdTime", "desc"));
 let docs = await getDocs(q);
 docs.forEach((doc) => {
   let row = doc.data();
   let docId = doc.id;
 
-  let image = row["image"];
   let name = row["name"];
   let content = row["content"];
   let createdTime = row["createdTime"];
@@ -57,7 +56,6 @@ docs.forEach((doc) => {
   let temp_html = `
   <div class="comment-item" data-id="${docId}">
     <div class="comment-header">
-      <img src="${image}">
       <strong class="commenter-name">${name}</strong>
       <span class="comment-date">${formattedDate}</span>
     </div>
@@ -69,7 +67,7 @@ docs.forEach((doc) => {
   $(".comments-list").append(temp_html);
 });
 
-// 상세 응원 문구 조회
+// 상세 응원 문구 조회 (read)
 $('.comments-list').on('click', '.comment-item', async function () {
   const docId = $(this).data('id');
 
@@ -81,7 +79,7 @@ $('.comments-list').on('click', '.comment-item', async function () {
   }
 })
 
-// 상세 응원 문구 삭제
+// 상세 응원 문구 삭제 (delete)
 $('.modal-content').on('click', '.deletebtn', async function () {
   const docId = $(this).data('id');
 
@@ -134,12 +132,9 @@ function showDetailPage(data, docId) {
 
   let detailHtml = `
   <div class="comment-container">
-    <div class="comment-profile">
-      <img src="${data.image}" alt="이미지">
-      <strong class="commenter-name">${data.name}</strong>
-    </div>
     <div class="comment-details">
       <div class="comment-detail-header">
+      <strong class="commenter-name">${data.name}</strong>
         <span class="comment-date">${formattedDate}</span>
       </div>
       <div class="comment-content detail-content">

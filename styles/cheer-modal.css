@@ -59,10 +59,14 @@
 
 .comment-detail-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* 이름과 날짜를 양옆으로 배치 */
+  font-size: 1rem;
   margin-bottom: 10px;
-  font-size: 0.9rem;
-  color: #aaa;
+}
+
+.modal-content.detailmodal {
+  max-width: 500px;
+  height: 300px;
 }
 
 .comment-content.detail-content {
@@ -72,7 +76,7 @@
 }
 
 .detail-content p {
-  margin: 0;
+  margin: -10;
   line-height: 1.5;
 }
 
