@@ -1,7 +1,7 @@
 fetch('./assets/team_data.txt')
   .then(response => response.text()) // data.txt의 내용을 텍스트로 읽어오겠다.
   .then(data => {
-    const teamData = data.split('\n'); // 줄 단위 묶어서 teamData 의 원소로 보겠다
+    const teamData = data.split(/:\r?\n/).filter(line => line.trim() !== '');
 
     document.querySelectorAll('.team-member img').forEach((item) => { //team-member의 img태그마다 확인한다
       item.addEventListener('click', function () { // 클릭이 발생했다면
@@ -35,6 +35,25 @@ fetch('./assets/team_data.txt')
           document.getElementById('team-link2').addEventListener('click', function() {
             window.open(link2, "_blank");
           });
+          switch (mbti) {
+            case "INTJ":
+              $("#intj-img").css("transform", "translateX(-400px)");
+              break;
+            case "ESTJ":
+              $("#estj-img").css("transform", "translateX(-600px)");
+              break;
+            case "INFP":
+              $("#infp-img").css("transform", "translateX(-750px)");
+              break;
+            case "ISTJ":
+              $("#istj-img").css("transform", "translateX(-1100px)");
+              break;
+            case "ENTP":
+              $("#entp-img").css("transform", "translateX(-900px)");
+              break;
+            default:
+              break;
+          }
 
           // 클릭이 들어갔기 때문에 모달창을 보여줌으로 바꿉니다
           document.querySelector('.sepa-bg').style.display = 'flex';
@@ -62,55 +81,28 @@ $(window).scroll(function() {
   }
 });
 
-// 캐릭터 이미지 클릭 시 해당하는 MBTI에 맞게 모달창 왼쪽에 보이게끔 유도
-$(document).ready(function() {
-  $(".team-member img").click(function() {
-    const mbti = $(this).attr("alt"); // 클릭된 이미지의 alt 값으로 MBTI 가져오기
-    
-    // 각 MBTI에 맞는 translateX 값 적용
-    switch (mbti) {
-      case "INTJ":
-        $("#intj-img").css("transform", "translateX(-400px)");
-        break;
-      case "ESTJ":
-        $("#estj-img").css("transform", "translateX(-600px)");
-        break;
-      case "INFP":
-        $("#infp-img").css("transform", "translateX(-750px)");
-        break;
-      case "ISTJ":
-        $("#istj-img").css("transform", "translateX(-1100px)");
-        break;
-      case "ENTP":
-        $("#entp-img").css("transform", "translateX(-900px)");
-        break;
-      default:
-        break;
-    }
-  });
-
-});
-
-// 추가부분****************************************************************************
-document.querySelectorAll('.team-member').forEach(member => {
-  // nickname 속성에 저장된 이름을 가져옵니다.
+// 캐릭터 이미지에 호버시 닉네임 출력. 모달창이 나오면 이미지가 가려지기 때문에 자연스레 사라짐
+document.querySelectorAll('.team-member').forEach(member => { // 각각 케릭터 이미지 마다
+  
+  // nickname 속성에 저장된 텍스트를 가져옵니다.
   const memberName = member.getAttribute('nickname');
 
-  member.addEventListener('mouseenter', (e) => {
+  // 케릭터 이미지에 마우스가 들어갔을 때
+  member.addEventListener('mouseenter', () => {
     const nickname = document.getElementById('nickname');
     nickname.innerText = memberName;
     nickname.style.display = 'block';
     const bgColor = member.getAttribute('bg-color'); 
     nickname.style.backgroundColor = bgColor; // 이름뒤 백컬러는 개인취향
   });
-
+  // 마우스 움직임을 따라오도록
   member.addEventListener('mousemove', (e) => {
     const nickname = document.getElementById('nickname');
     nickname.style.left = (e.pageX+10)+'px';
     nickname.style.top = (e.pageY+20)+'px';
   });
-
-  member.addEventListener('mouseleave', (e) => {
+  // 마우스 떠나면 창을 안보이게
+  member.addEventListener('mouseleave', () => {
     const nickname = document.getElementById('nickname');
     nickname.style.display = 'none';
   });
