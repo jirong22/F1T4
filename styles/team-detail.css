@@ -98,12 +98,13 @@
 }
 
 .buttons {
-  display:flex;
+  display: flex;
   gap: 120px;
   padding: 10px 10px 10px 190px;
 }
 
-.btn-success, .btn-info {
+.btn-success,
+.btn-info {
   position: relative;
   border-radius: 100%;
   width: 55px;
@@ -113,12 +114,12 @@
 }
 
 .btn-with-bg1 {
-  background-image: url('../assets/velog.ico');
+  background-image: url("../assets/velog.ico");
   background-size: contain;
   background-position: center;
 }
 .btn-with-bg2 {
-  background-image: url('../assets/github.ico');
+  background-image: url("../assets/github.ico");
   background-size: contain;
   background-position: center;
 }

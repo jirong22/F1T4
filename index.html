@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="F1T4 팀 소개 페이지입니다." />
     <title>F1T4</title>
 
     <!-- 부트스트랩 import -->
@@ -42,7 +43,7 @@
       </div>
 
       <!-- 일정표 -->
-      <div id="schedule-container" class="schedule hidden">
+      <section id="schedule-container" class="schedule hidden">
         <h3>📅 우리 팀 일정표</h3>
         <ul>
           <li>09:00 ~ 09:30 - 데일리 스크럼 진행 중</li>
@@ -56,12 +57,12 @@
             기타 시간 - 휴식 또는 개인 시간
           </li>
         </ul>
-      </div>
+      </section>
 
       <div class="divider"></div>
 
       <!-- 네비게이션 탭 -->
-      <div
+      <nav
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
       >
         <!-- 네비게이션 메뉴 -->
@@ -74,7 +75,7 @@
           </li>
           <li><a href="#guestbook" class="nav-link px-2">방명록</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <!-- 본문 섹션 -->
@@ -82,7 +83,12 @@
       <!-- 팀원 섹션 -->
       <section class="teams" id="teams">
         <ul>
-          <li class="team-member" data-mbti="INTJ" nickname="개척민 임재영" bg-color="#ff9999">
+          <li
+            class="team-member"
+            data-mbti="INTJ"
+            nickname="개척민 임재영"
+            bg-color="#ff9999"
+          >
             <img
               class="intj"
               src="./assets/intj.png"
@@ -90,7 +96,12 @@
               alt="INTJ"
             />
           </li>
-          <li class="team-member" data-mbti="ESTJ" nickname="랜덤 박지연" bg-color="#99ffad">
+          <li
+            class="team-member"
+            data-mbti="ESTJ"
+            nickname="랜덤 박지연"
+            bg-color="#99ffad"
+          >
             <img
               class="estj"
               src="./assets/estj.png"
@@ -98,7 +109,12 @@
               alt="ESTJ"
             />
           </li>
-          <li class="team-member" data-mbti="INFP" nickname="지켜줘 안유빈" bg-color="#fffd99">
+          <li
+            class="team-member"
+            data-mbti="INFP"
+            nickname="지켜줘 안유빈"
+            bg-color="#fffd99"
+          >
             <img
               class="infp"
               src="./assets/infp.png"
@@ -106,7 +122,12 @@
               alt="INFP"
             />
           </li>
-          <li class="team-member" data-mbti="ENTP" nickname="학습된 백수린" bg-color="#99afff">
+          <li
+            class="team-member"
+            data-mbti="ENTP"
+            nickname="학습된 백수린"
+            bg-color="#99afff"
+          >
             <img
               class="entp"
               src="./assets/entp.png"
@@ -114,7 +135,12 @@
               alt="ENTP"
             />
           </li>
-          <li class="team-member" data-mbti="ISTJ" nickname="날개 김현우" bg-color="#ff99f3">
+          <li
+            class="team-member"
+            data-mbti="ISTJ"
+            nickname="날개 김현우"
+            bg-color="#ff99f3"
+          >
             <img
               class="istj"
               src="./assets/istj.png"
@@ -146,7 +172,10 @@
                 기본입니다</textarea
               >
               <div class="buttons mb-3">
-                <button class="btn-success btn-with-bg1" id="team-link1"></button>
+                <button
+                  class="btn-success btn-with-bg1"
+                  id="team-link1"
+                ></button>
                 <button class="btn-info btn-with-bg2" id="team-link2"></button>
                 <button class="closebtn">닫기</button>
               </div>
@@ -161,7 +190,7 @@
           <!-- 왼쪽 1/2 (약속+목표) -->
           <div class="left-sec">
             <!--약속-->
-            <div class="desc-promise">
+            <article class="desc-promise">
               <div class="desc-item" data-key="a3">
                 <span>약속 1</span>
                 <p>시간 약속을 철저히 지키겠습니다</p>
@@ -184,10 +213,10 @@
                   집중하겠습니다.
                 </p>
               </div>
-            </div>
+            </article>
 
             <!-- 오른쪽 (목표) -->
-            <div class="desc-goal">
+            <article class="desc-goal">
               <div class="desc-item" data-key="b2">
                 <span>목표 1</span>
                 <p>TIL 남은날까지 맨날 쓰기</p>
@@ -200,7 +229,7 @@
                 <span>목표 3</span>
                 <p>이번 프로젝트 포트폴리오로 사용하기</p>
               </div>
-            </div>
+            </article>
           </div>
           <div class="right-sec">
             <!-- 오른쪽 원형 메뉴 -->
@@ -230,15 +259,15 @@
             </div>
           </div>
           <!-- 응원하기 버튼 -->
-          <div class="button-container">
+          <aside class="button-container">
             <button type="button" class="btn btn-outline-primary openbtn">
               우리 팀을 응원해주세요 ❗️
             </button>
-          </div>
+          </aside>
         </div>
       </section>
     </main>
-    
+
     <!-- 모달 백그라운드 -->
     <div class="modal-bg"></div>
     <!-- 응원 문구 상세 모달 부분-->
