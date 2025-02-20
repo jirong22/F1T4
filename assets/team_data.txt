@@ -9,15 +9,6 @@ INTJ|임재영|1. 사용할 수 있는 언어, 프레임워크
 - 경험한적 있는 상황에선 여유가 나오지만, 
 - 아닌 경우엔 스스로 몰아넣는 타입. 
 
-<<<<<<< HEAD
-여기는글자가넘어가는지에대한설명을주저리1주저리2주저리3주저리4주저리5주저리6|https://velog.io/@kalystols/posts/|https://github.com/supremhum/|velog:
-ESTJ|박지연|지연님의 현명
-테스트1
-테스트2|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
-INFP|안유빈|유빈님의 기품|https://anyubinn.github.io/|https://github.com/anyubinn|yubinn:
-ISTJ|김현우|현우님의 영민|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
-ENTP|백수린|수린님의 지혜|https://velog.io/@luv_lyn/posts|https://github.com/harinbeee/|velog
-=======
 4. TMI
 - 이번주부터 주말에 운전면허 땁니다. 사고 안나게 도와주세요.
 - 15년을 키운 강아지가 있습니다. 최근에 못 놀아 줘서 저를 무시하네요
@@ -78,4 +69,3 @@ ENTP|백수린|1. 사용할 수 있는 언어, 프레임워크
 - 잠이 늘 부족한 관계로 다크서클이 심합니다 의사선생님의 권유로 피부과에 간적이 있습니다
 - 사주에 오행이 골고루 있습니다
 - 주로 isfp라고 말하고 다닙니다|https://velog.io/@luv_lyn/posts|https://github.com/harinbeee/|velog:
->>>>>>> 95d3d3f (상세페이지 달성99.9%)
