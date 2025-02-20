@@ -29,12 +29,12 @@ fetch('./assets/team_data.txt')
           document.getElementById('team-member-details').value = details;
 
           // 링크 버튼에 URL 설정 왼쪽은 블로그, 오른쪽은 깃헙주소입니다
-          document.getElementById('team-link1').addEventListener('click', function() {
+          document.getElementById('team-link1').onclick = function() {
             window.open(link1, "_blank");
-          });
-          document.getElementById('team-link2').addEventListener('click', function() {
+          };
+          document.getElementById('team-link2').onclick = function() {
             window.open(link2, "_blank");
-          });
+          };
           switch (mbti) {
             case "INTJ":
               $("#intj-img").css("transform", "translateX(-400px)");
