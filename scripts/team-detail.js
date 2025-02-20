@@ -14,12 +14,12 @@ fetch("./assets/team_data.txt")
 
         if (memberData) {
           // 해당 member의 각 속성을 |로 구분하여 별명짓고
-          const [mbtiType, name, details, link1, link2, blog] =
+          const [mbtiType,rname, name, details, link1, link2, blog] =
             memberData.split("|");
 
           // 상세창의 왼쪽 이미지를 수정합니다. 이미지파일은 이름.png
           const teamMemberContent = document.querySelector(".image-box");
-          teamMemberContent.style.backgroundImage = `url('../assets/profile-img/${name}.png')`;
+          teamMemberContent.style.backgroundImage = `url('../assets/profile-img/${rname}.png')`;
 
           // 해당 멤버의 블로그와 깃헙 주소에 맞게 버튼 이미지를 변경합니다
           const teamblog = document.querySelector(".btn-with-bg1");
