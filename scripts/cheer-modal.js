@@ -33,7 +33,7 @@ const db = getFirestore(app);
  * - 모달창에서 '등록' 버튼 클릭 시 동작
  * - Firebase Firestore에 응원 내용 저장:
  *   1. 입력된 이름(name)과 내용(content)을 포함한 문서(doc) 생성
- *   2. Firebase에서 제공하는 Timestamp를 사용하여 날짜 자동 기록
+ *   2. Firebase에서 제공하는 Timestamp를 사용하여 Javascript의 Date 객체 저장
  * - 저장 성공 시:
  *   1. '저장 완료!' 알림창 표시
  *   2. 화면 새로고침으로 변경 사항 즉시 반영
