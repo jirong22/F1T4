@@ -52,7 +52,7 @@ ISTJ|김현우|김현우 <span style="font-size: 24px; font-weight: bold;">Kim h
 - 귀여운 모란앵무 키웁니다.
     - 멍청하게 생겼어요 <span class="lovebird">[lovebird]<img class="lovebird-img" src="./assets/lovebird.png" alt="lovebird" /></span>
 - 팀원들 몰래 코드를 보기 좋게 바꿔놓습니다..?|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
-ENTP|백수린|백수린 <span style="font-size: 24px; font-weight: bold;">Baek Soo-Rin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+ENTP|백수린|백수린 <span style="font-size: 24px; font-weight: bold;">Baek Su-Rin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - javascript, css, html, mysql
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
