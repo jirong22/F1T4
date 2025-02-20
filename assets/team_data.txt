@@ -8,7 +8,7 @@ INTJ|임재영|사는곳 : 경기도
 수단과 방법을 가리지 않으려고 함
 
 여기는글자가넘어가는지에대한설명을주저리1주저리2주저리3주저리4주저리5주저리6|https://velog.io/@kalystols/posts/|https://github.com/supremhum/|velog:
-ESTJ|박지연|지연님의 현명|https://journal9493.tistory.com//|https://github.com/jirong22/|tistory:
-INFP|안유빈|유빈님의 기품|https://anyubinn.github.io//|https://github.com/anyubinn|yubinn:
+ESTJ|박지연|지연님의 현명|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
+INFP|안유빈|유빈님의 기품|https://anyubinn.github.io/|https://github.com/anyubinn/|yubinn:
 ISTJ|김현우|현우님의 영민|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
-ENTP|백수린|수린님의 지혜|https://velog.io/@luv_lyn/posts|https://github.com/harinbeee/|velog:
+ENTP|백수린|수린님의 지혜|https://velog.io/@luv_lyn/posts/|https://github.com/harinbeee/|velog

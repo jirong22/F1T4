@@ -27,9 +27,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-/** 
+/**
  * [응원 문구 등록 (create)]
- * 
+ *
  * - 모달창에서 '등록' 버튼 클릭 시 동작
  * - Firebase Firestore에 응원 내용 저장:
  *   1. 입력된 이름(name)과 내용(content)을 포함한 문서(doc) 생성
@@ -51,9 +51,9 @@ $(".postingbtn").click(async function () {
   window.location.reload(); // 새로고침 후 UI 반영
 });
 
-/** 
+/**
  * [응원 문구 리스트 조회 (read)]
- * 
+ *
  * - Firebase에서 'comments' 컬랙션의 데이터 조회:
  *   1. 'createdTime'을 기준으로 내림차순 정렬 (최근 날짜가 위로 오도록)
  *   2. 모든 데이터를 화면에 표시
@@ -96,9 +96,9 @@ docs.forEach((doc) => {
   $(".comments-list").append(temp_html);
 });
 
-/** 
+/**
  * [상세 응원 문구 조회 (read)]
- * 
+ *
  * - 사용자가 특정 댓글을 클릭했을 때 동작:
  *   1. 클릭된 댓글의 'docId'를 가져옴
  *   2. Firebase에서 해당 id에 맞는 문서를 조회
@@ -118,9 +118,9 @@ $(".comments-list").on("click", ".comment-item", async function () {
   }
 });
 
-/** 
+/**
  * [상세 응원 문구 삭제 (delete)]
- * 
+ *
  * - 사용자가 특정 상세 댓글의 '삭제' 버튼을 클릭했을 때 동작:
  *   1. 클릭된 댓글의 'docId'를 가져옴
  *   2. Firebase에서 해당 id에 맞는 문서를 삭제
@@ -131,13 +131,13 @@ $(".comments-list").on("click", ".comment-item", async function () {
  **/
 $(".modal-content").on("click", ".deletebtn", async function () {
   const docId = $(this).data("id"); // 삭제할 문서의 id 가져오기
-// 상세 응원 문구 삭제 (delete)
+  // 상세 응원 문구 삭제 (delete)
 
   // Firebase 문서 삭제
   const docRef = doc(db, "comments", docId);
   await deleteDoc(docRef);
 
-  alert('삭제 완료!');
+  alert("삭제 완료!");
   closeModal(); // 모달창 닫기
   alert("삭제 완료!");
   closeModal();
@@ -146,7 +146,7 @@ $(".modal-content").on("click", ".deletebtn", async function () {
 
 /**
  * [응원 문구 등록 모달창 열기]
- * 
+ *
  * - 사용자가 '우리 팀을 응원해주세요!' 버튼을 클릭했을 때 동작:
  *   1. 'openModal()' 함수 호출로 '.cheercomment' 모달창 열기
  **/
@@ -156,25 +156,25 @@ $(".openbtn").click(function () {
 
 /**
  * [응원 문구 등록 모달창 닫기]
- * 
+ *
  * - 사용자가 응원 문구 등록 모달창에서 '닫기' 버튼을 클릭했을 때 동작:
  *   1. 'closeModal()' 함수 호출로 응원 문구 등록 모달창 닫기
  **/
 $(".closebtn").click(closeModal); // 모달창 닫기
 
-/** 
+/**
  * [상세 응원 문구 모달창 닫기]
- * 
+ *
  * - 사용자가 특정 상세 댓글의 '닫기' 버튼을 클릭했을 때 동작:
  *   1. 'closeModal()' 함수 호출로 상세 응원 문구 모달창 닫기
  **/
 $(document).on("click", ".closebtn", function () {
   closeModal(); // 모달창 닫기
-})
+});
 
-/** 
+/**
  * [모달창 열기 함수]
- * 
+ *
  * - 'modalSelector'에 해당하는 모달창을 화면에 표시:
  *   1. 현재 스크롤의 위치와 창의 높이를 기반으로 모달창의 위치를 중앙으로 맞춤
  *   2. '.modal-bg' 배경을 표시
@@ -197,9 +197,9 @@ function openModal(modalSelector) {
   });
 }
 
-/** 
+/**
  * [모달창 닫기 함수]
- * 
+ *
  * - 모달창과 관련된 요소 숨김
  **/
 function closeModal() {
@@ -213,9 +213,9 @@ function closeModal() {
   );
 }
 
-/** 
+/**
  * [상세 응원 문구 모달창 표시 함수]
- * 
+ *
  * - 주어진 'data'와 'docId'를 기반으로 상세 응원 문구를 모달창에 표시:
  *   1. 'data'에서 'createdTime'을 원하는 날짜 형식으로 변환
  *   2. 'data'에 포함된 이름, 날짜, 내용 등을 모달창에 표시할 HTML 구조 생성

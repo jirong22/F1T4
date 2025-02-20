@@ -115,12 +115,12 @@
 }
 
 .btn-with-bg1 {
-  background-image: url("../assets/velog.ico");
+  background-image: url("../assets/personal-link/velog.ico");
   background-size: contain;
   background-position: center;
 }
 .btn-with-bg2 {
-  background-image: url("../assets/github.ico");
+  background-image: url("../assets/personal-link/github.ico");
   background-size: contain;
   background-position: center;
 }
