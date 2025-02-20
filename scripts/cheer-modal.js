@@ -139,8 +139,6 @@ $(".modal-content").on("click", ".deletebtn", async function () {
 
   alert("삭제 완료!");
   closeModal(); // 모달창 닫기
-  alert("삭제 완료!");
-  closeModal();
   window.location.reload();
 });
 
