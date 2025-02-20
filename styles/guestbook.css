@@ -22,7 +22,6 @@
   font-weight: bold;
 }
 
-
 .guestbook-list {
   display: flex;
   flex-direction: column; /* 세로로 정렬 */
@@ -40,7 +39,6 @@
   max-width: 700px;
   width: 100%;
   margin-bottom: 10px; /* 댓글 간의 간격 추가 */
-
 }
 
 .comment-item:hover {
@@ -65,7 +63,6 @@
 .comment-date {
   color: #aaa; /* 날짜 색은 연한 회색 */
   margin: 10px;
-
 }
 
 .comment-content p {
@@ -82,7 +79,6 @@
   /* border-radius: 50%; */
   display: none; /* 이미지를 숨김 */
 }
-
 
 button {
   background-color: #007bff; /* 파란색 버튼 */
@@ -191,7 +187,7 @@ button:focus {
   justify-content: space-between; /* 버튼을 좌우로 정렬 */
   gap: 15px; /* 버튼 간격을 15px로 수정 */
   margin-top: 20px;
-} 
+}
 
 button.btn-light {
   background-color: #007bff; /* 어두운 배경 */

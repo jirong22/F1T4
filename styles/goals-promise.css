@@ -30,7 +30,7 @@
   flex: 2;
   gap: 20px;
   width: 80%;
-  margin: 0 200px;
+  margin: 0 5vw;
 }
 
 .desc-promise {
@@ -98,14 +98,8 @@
   position: relative;
   background: #5b5b5b;
   border-radius: 50%;
-
-  /* 화면 크기에 따라 조절 */
-  width: min(30vw, 500px);
-  height: min(30vw, 500px);
-  min-width: 300px;
-  min-height: 300px;
-  max-width: 500px;
-  max-height: 500px;
+  width: 500px;
+  height: 500px;
 }
 
 .circle-item {
@@ -116,17 +110,9 @@
   background: white;
   border-radius: 50%;
   cursor: pointer;
-
-  /* 크기를 바깥 원의 23%로 설정 */
-  width: 23%;
-  height: 23%;
-  font-size: min(15vw, 3rem);
-  /* font-size: calc(15vw+3rem); */
-  max-width: 100px;
-  max-height: 100px;
-  min-width: 60px;
-  min-height: 60px;
-  position: absolute;
+  width: 130px;
+  height: 130px;
+  font-size: min(10vw, 2.5rem);
 }
 
 .circle-item.active {
@@ -137,25 +123,25 @@
 
 /* 원 안의 아이템 둥글게 정렬 (동적 위치 조정) */
 .circle-item:nth-child(1) {
-  transform: rotate(0deg) translate(calc(50% - 12%)) rotate(0deg);
+  transform: rotate(0deg) translate(180px) rotate(0deg);
 }
 
 .circle-item:nth-child(2) {
-  transform: rotate(60deg) translate(calc(50% - 12%)) rotate(-60deg);
+  transform: rotate(60deg) translate(180px) rotate(-60deg);
 }
 
 .circle-item:nth-child(3) {
-  transform: rotate(120deg) translate(calc(50% - 12%)) rotate(-120deg);
+  transform: rotate(120deg) translate(180px) rotate(-120deg);
 }
 
 .circle-item:nth-child(4) {
-  transform: rotate(180deg) translate(calc(50% - 12%)) rotate(-180deg);
+  transform: rotate(180deg) translate(180px) rotate(-180deg);
 }
 
 .circle-item:nth-child(5) {
-  transform: rotate(240deg) translate(calc(50% - 12%)) rotate(-240deg);
+  transform: rotate(240deg) translate(180px) rotate(-240deg);
 }
 
 .circle-item:nth-child(6) {
-  transform: rotate(300deg) translate(calc(50% - 12%)) rotate(-300deg);
+  transform: rotate(300deg) translate(180px) rotate(-300deg);
 }

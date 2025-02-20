@@ -5,9 +5,14 @@ import {
   addDoc,
   Timestamp,
   query,
-  orderBy
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs, getDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  getDocs,
+  getDoc,
+  doc,
+  deleteDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTq2hFNBSkqZwNQ4ZWzvM0vM8s5p9yMsQ",
@@ -21,12 +26,12 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// 응원 문구 등록 (create)
 $(".postingbtn").click(async function () {
-  let image = $("#image").val();
   let name = $("#name").val();
   let content = $("#content").val();
   let doc = {
-    image: image,
     name: name,
     content: content,
     createdTime: Timestamp.fromDate(new Date()),
@@ -36,14 +41,13 @@ $(".postingbtn").click(async function () {
   window.location.reload();
 });
 
-// 응원 문구 리스트 조회
+// 응원 문구 리스트 조회 (read)
 let q = query(collection(db, "comments"), orderBy("createdTime", "desc"));
 let docs = await getDocs(q);
 docs.forEach((doc) => {
   let row = doc.data();
   let docId = doc.id;
 
-  let image = row["image"];
   let name = row["name"];
   let content = row["content"];
   let createdTime = row["createdTime"];
@@ -57,7 +61,6 @@ docs.forEach((doc) => {
   let temp_html = `
   <div class="comment-item" data-id="${docId}">
     <div class="comment-header">
-      <img src="${image}">
       <strong class="commenter-name">${name}</strong>
       <span class="comment-date">${formattedDate}</span>
     </div>
@@ -69,9 +72,9 @@ docs.forEach((doc) => {
   $(".comments-list").append(temp_html);
 });
 
-// 상세 응원 문구 조회
-$('.comments-list').on('click', '.comment-item', async function () {
-  const docId = $(this).data('id');
+// 상세 응원 문구 조회 (read)
+$(".comments-list").on("click", ".comment-item", async function () {
+  const docId = $(this).data("id");
 
   const docSnap = await getDoc(doc(db, "comments", docId));
 
@@ -79,29 +82,29 @@ $('.comments-list').on('click', '.comment-item', async function () {
     const data = docSnap.data();
     showDetailPage(data, docId);
   }
-})
+});
 
-// 상세 응원 문구 삭제
-$('.modal-content').on('click', '.deletebtn', async function () {
-  const docId = $(this).data('id');
+// 상세 응원 문구 삭제 (delete)
+$(".modal-content").on("click", ".deletebtn", async function () {
+  const docId = $(this).data("id");
 
   const docRef = doc(db, "comments", docId);
   await deleteDoc(docRef);
-  alert('삭제 완료!');
+  alert("삭제 완료!");
   closeModal();
   window.location.reload();
-})
+});
 
-$('.openbtn').click(function () {
+$(".openbtn").click(function () {
   openModal(".cheercomment");
 });
 
-$('.closebtn').click(closeModal);
+$(".closebtn").click(closeModal);
 
 // 상세 응원 문구 닫기
-$(document).on('click', '.closebtn', function () {
+$(document).on("click", ".closebtn", function () {
   closeModal();
-})
+});
 
 function openModal(modalSelector) {
   const scrollY = $(window).scrollTop();
@@ -123,24 +126,24 @@ function closeModal() {
   $(".modal-content").css("display", "none");
   $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
-  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "");
+  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css(
+    "transform",
+    ""
+  );
 }
 
 function showDetailPage(data, docId) {
   const date = data.createdTime.toDate();
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   const formattedDate = `${year}.${month}.${day}`;
 
   let detailHtml = `
   <div class="comment-container">
-    <div class="comment-profile">
-      <img src="${data.image}" alt="이미지">
-      <strong class="commenter-name">${data.name}</strong>
-    </div>
     <div class="comment-details">
       <div class="comment-detail-header">
+      <strong class="commenter-name">${data.name}</strong>
         <span class="comment-date">${formattedDate}</span>
       </div>
       <div class="comment-content detail-content">
@@ -154,6 +157,6 @@ function showDetailPage(data, docId) {
   </div>
   `;
 
-  $('.modal-content.detailmodal').html(detailHtml);
+  $(".modal-content.detailmodal").html(detailHtml);
   openModal(".modal-content.detailmodal");
 }
