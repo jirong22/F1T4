@@ -19,7 +19,7 @@ fetch("./assets/team_data.txt")
 
           // 상세창의 왼쪽 이미지를 수정합니다. 이미지파일은 이름.png
           const teamMemberContent = document.querySelector(".image-box");
-          teamMemberContent.style.backgroundImage = `url('../assets/${name}.png')`;
+          teamMemberContent.style.backgroundImage = `url('../assets/profile-img/${name}.png')`;
 
           // 해당 멤버의 블로그와 깃헙 주소에 맞게 버튼 이미지를 변경합니다
           const teamblog = document.querySelector(".btn-with-bg1");
