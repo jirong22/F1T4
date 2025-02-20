@@ -30,7 +30,7 @@ fetch("./assets/team_data.txt")
           document.getElementById("team-member-name").value = name;
 
           // 해당 멤버의 상세정보를 모달창에 표기합니다
-          document.getElementById("team-member-details").value = details;
+          document.getElementById("team-member-details").innerHTML = details;
 
           // 링크 버튼에 URL 설정 왼쪽은 블로그, 오른쪽은 깃헙주소입니다
           document.getElementById("team-link1").onclick = function () {
