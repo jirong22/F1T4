@@ -87,6 +87,7 @@
   margin: 10px 10px 10px 15px;
   font-size: 30px;
   border-radius: 5px;
+  padding: 10px;
 }
 .form-control-dt {
   flex-grow: 1;
@@ -95,6 +96,7 @@
   margin: 10px 10px 10px 0px;
   font-size: 25px;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .buttons {
