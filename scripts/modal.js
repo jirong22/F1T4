@@ -5,9 +5,14 @@ import {
   addDoc,
   Timestamp,
   query,
-  orderBy
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs, getDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  getDocs,
+  getDoc,
+  doc,
+  deleteDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTq2hFNBSkqZwNQ4ZWzvM0vM8s5p9yMsQ",
@@ -101,8 +106,8 @@ docs.forEach((doc) => {
  *   1. Firebase에서 데이터를 가져옴
  *   2. 'showDetailPage()' 함수를 호출하여 데이터를 화면에 표시
  **/
-$('.comments-list').on('click', '.comment-item', async function () {
-  const docId = $(this).data('id'); // 클릭된 댓글의 docId
+$(".comments-list").on("click", ".comment-item", async function () {
+  const docId = $(this).data("id"); // 클릭된 댓글의 docId
 
   // 해당 문서 조회
   const docSnap = await getDoc(doc(db, "comments", docId));
@@ -111,7 +116,7 @@ $('.comments-list').on('click', '.comment-item', async function () {
     const data = docSnap.data(); // 문서 데이터 가져오기
     showDetailPage(data, docId); // 상세 페이지 표시
   }
-})
+});
 
 /** 
  * [상세 응원 문구 삭제 (delete)]
@@ -124,8 +129,9 @@ $('.comments-list').on('click', '.comment-item', async function () {
  *   2. 'closeModal()' 함수 호출로 모달창 닫기
  *   3. 화면 새로고침으로 변경 사항 즉시 반영
  **/
-$('.modal-content').on('click', '.deletebtn', async function () {
-  const docId = $(this).data('id'); // 삭제할 문서의 id 가져오기
+$(".modal-content").on("click", ".deletebtn", async function () {
+  const docId = $(this).data("id"); // 삭제할 문서의 id 가져오기
+// 상세 응원 문구 삭제 (delete)
 
   // Firebase 문서 삭제
   const docRef = doc(db, "comments", docId);
@@ -133,8 +139,10 @@ $('.modal-content').on('click', '.deletebtn', async function () {
 
   alert('삭제 완료!');
   closeModal(); // 모달창 닫기
+  alert("삭제 완료!");
+  closeModal();
   window.location.reload();
-})
+});
 
 /**
  * [응원 문구 등록 모달창 열기]
@@ -142,7 +150,7 @@ $('.modal-content').on('click', '.deletebtn', async function () {
  * - 사용자가 '우리 팀을 응원해주세요!' 버튼을 클릭했을 때 동작:
  *   1. 'openModal()' 함수 호출로 '.cheercomment' 모달창 열기
  **/
-$('.openbtn').click(function () {
+$(".openbtn").click(function () {
   openModal(".cheercomment"); // 모달창 열기
 });
 
@@ -152,7 +160,7 @@ $('.openbtn').click(function () {
  * - 사용자가 응원 문구 등록 모달창에서 '닫기' 버튼을 클릭했을 때 동작:
  *   1. 'closeModal()' 함수 호출로 응원 문구 등록 모달창 닫기
  **/
-$('.closebtn').click(closeModal); // 모달창 닫기
+$(".closebtn").click(closeModal); // 모달창 닫기
 
 /** 
  * [상세 응원 문구 모달창 닫기]
@@ -160,7 +168,7 @@ $('.closebtn').click(closeModal); // 모달창 닫기
  * - 사용자가 특정 상세 댓글의 '닫기' 버튼을 클릭했을 때 동작:
  *   1. 'closeModal()' 함수 호출로 상세 응원 문구 모달창 닫기
  **/
-$(document).on('click', '.closebtn', function () {
+$(document).on("click", ".closebtn", function () {
   closeModal(); // 모달창 닫기
 })
 
@@ -199,7 +207,10 @@ function closeModal() {
   $(".modal-content").css("display", "none");
   $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
-  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "");
+  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css(
+    "transform",
+    ""
+  );
 }
 
 /** 
@@ -214,8 +225,8 @@ function closeModal() {
 function showDetailPage(data, docId) {
   const date = data.createdTime.toDate();
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   const formattedDate = `${year}.${month}.${day}`;
 
   // 모달창에 표시할 상세 응원 문구 HTML 구조 생성
@@ -237,6 +248,6 @@ function showDetailPage(data, docId) {
   </div>
   `;
 
-  $('.modal-content.detailmodal').html(detailHtml); // 생성된 HTML을 모달창에 삽입
+  $(".modal-content.detailmodal").html(detailHtml); // 생성된 HTML을 모달창에 삽입
   openModal(".modal-content.detailmodal"); // 모달창 열기
 }

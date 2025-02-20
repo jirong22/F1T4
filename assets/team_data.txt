@@ -1,5 +1,5 @@
-INTJ|임재영|재영입니다|https://www.naver.com/|https://www.daum.net/
-ESTJ|박지연|지연님의 현명|https://www.yahoo.com/|https://www.google.com/
-INFP|안유빈|유빈님의 기품|https://nbcamp.spartacodingclub.kr/|https://www.notion.com/ko
-ISTJ|김현우|현우님의 영민|https://getbootstrap.com/|https://jquery.com/
-ENTP|백수린|수린님의 지혜|https://zep.us/home/spaces|https://docs.github.com/
+INTJ|임재영|재영입니다|https://www.naver.com/|https://www.daum.net/|velog
+ESTJ|박지연|지연님의 현명|https://www.yahoo.com/|https://www.google.com/|tistory
+INFP|안유빈|유빈님의 기품|https://nbcamp.spartacodingclub.kr/|https://www.notion.com/ko|yubinn
+ISTJ|김현우|현우님의 영민|https://getbootstrap.com/|https://jquery.com/|velog
+ENTP|백수린|수린님의 지혜|https://zep.us/home/spaces|https://docs.github.com/|velog

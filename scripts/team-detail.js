@@ -13,10 +13,12 @@ fetch('./assets/team_data.txt')
         const memberData = teamData.find(row => row.startsWith(mbti));
 
         if (memberData) {
-          const [mbtiType, name, details, link1, link2] = memberData.split('|');
+          const [mbtiType, name, details, link1, link2, blog] = memberData.split('|');
 
           const teamMemberContent = document.querySelector('.image-box');
           teamMemberContent.style.backgroundImage = `url('../assets/${mbtiType.toLowerCase()}.png')`; // 상세표의 이미지는 다른폴더의 해당 mbti.png로 넣어두면 될듯
+          const teamblog = document.querySelector('.btn-with-bg1');
+          teamblog.style.backgroundImage = `url('../assets/${blog.trim()}.ico')`;
 
           document.getElementById('team-member-name').value = name;
 
@@ -86,20 +88,27 @@ $(document).ready(function() {
 
 });
 
-/* #intj-img {
-  transform: translateX(-950px);
-}
-#istj-img {
-  transform: translateX(-900px);
-}
-#estj-img {
-  transform: translateX(-600px);
-}
-#entp-img {
-  transform: translateX(-1100px);
-}
-#infp-img {
-  transform: translateX(-750px);
-} */
-/* 캐릭터-모달창 띄울 시 화면 왼쪽에 있는 케릭터 offset */
+// 추가부분****************************************************************************
+document.querySelectorAll('.team-member').forEach(member => {
+  // nickname 속성에 저장된 이름을 가져옵니다.
+  const memberName = member.getAttribute('nickname');
 
+  member.addEventListener('mouseenter', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.innerText = memberName;
+    nickname.style.display = 'block';
+    const bgColor = member.getAttribute('bg-color'); 
+    nickname.style.backgroundColor = bgColor; // 이름뒤 백컬러는 개인취향
+  });
+
+  member.addEventListener('mousemove', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.style.left = (e.pageX+10)+'px';
+    nickname.style.top = (e.pageY+20)+'px';
+  });
+
+  member.addEventListener('mouseleave', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.style.display = 'none';
+  });
+});
