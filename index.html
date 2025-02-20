@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="F1T4 팀 소개 페이지입니다." />
     <title>F1T4</title>
 
     <!-- 부트스트랩 import -->
@@ -43,7 +42,7 @@
       </div>
 
       <!-- 일정표 -->
-      <section id="schedule-container" class="schedule hidden">
+      <div id="schedule-container" class="schedule hidden">
         <h3>📅 우리 팀 일정표</h3>
         <ul>
           <li>09:00 ~ 09:30 - 데일리 스크럼 진행 중</li>
@@ -57,12 +56,12 @@
             기타 시간 - 휴식 또는 개인 시간
           </li>
         </ul>
-      </section>
+      </div>
 
       <div class="divider"></div>
 
       <!-- 네비게이션 탭 -->
-      <nav
+      <div
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
       >
         <!-- 네비게이션 메뉴 -->
@@ -75,7 +74,7 @@
           </li>
           <li><a href="#guestbook" class="nav-link px-2">방명록</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <!-- 본문 섹션 -->
@@ -190,7 +189,7 @@
           <!-- 왼쪽 1/2 (약속+목표) -->
           <div class="left-sec">
             <!--약속-->
-            <article class="desc-promise">
+            <div class="desc-promise">
               <div class="desc-item" data-key="a3">
                 <span>약속 1</span>
                 <p>시간 약속을 철저히 지키겠습니다</p>
@@ -213,10 +212,10 @@
                   집중하겠습니다.
                 </p>
               </div>
-            </article>
+            </div>
 
             <!-- 오른쪽 (목표) -->
-            <article class="desc-goal">
+            <div class="desc-goal">
               <div class="desc-item" data-key="b2">
                 <span>목표 1</span>
                 <p>TIL 남은날까지 맨날 쓰기</p>
@@ -229,7 +228,7 @@
                 <span>목표 3</span>
                 <p>이번 프로젝트 포트폴리오로 사용하기</p>
               </div>
-            </article>
+            </div>
           </div>
           <div class="right-sec">
             <!-- 오른쪽 원형 메뉴 -->
@@ -259,11 +258,11 @@
             </div>
           </div>
           <!-- 응원하기 버튼 -->
-          <aside class="button-container">
+          <div class="button-container">
             <button type="button" class="btn btn-outline-primary openbtn">
               우리 팀을 응원해주세요 ❗️
             </button>
-          </aside>
+          </div>
         </div>
       </section>
     </main>
