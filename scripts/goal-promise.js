@@ -2,15 +2,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 이벤트리스너 - html 로드된 후, javascript가 실행
   const circleItems = document.querySelectorAll(".circle-item");
+  const descItems = document.querySelectorAll(".desc-item"); // 써클아이템과 설명아이템을 불러온다
 
   circleItems.forEach((item) => {
     // 초기 transform 값을 가져와서 아래처럼 저장하기 !
     item.dataset.originalTransform = window.getComputedStyle(item).transform;
   });
 
-  console.log("원래 위치 저장:", circleItems);
+  descItems.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const key = this.dataset.key; // desc-item의 data-key 가져오기
+      removeActiveStates();
+      activateItems(key); // 해당하는 circle-item 강조
+    });
+  });
 
-  const descItems = document.querySelectorAll(".desc-item"); // 써클아이템과 설명아이템을 불러온다
+  document.addEventListener("click", () => {
+    removeActiveStates();
+  });
 
   /* 초기 화면 세팅 */
   function removeActiveStates() {
