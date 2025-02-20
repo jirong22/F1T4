@@ -123,6 +123,7 @@ function closeModal() {
   $(".modal-content").css("display", "none");
   $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
+  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "");
 }
 
 function showDetailPage(data, docId) {

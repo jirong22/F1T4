@@ -47,7 +47,7 @@ $(window).scroll(function() {
   if ($(this).scrollTop() > 300) {
     $(".teamdt-bg").addClass("hidden");  // hidden 클래스를 추가하여 서서히 숨기기
     $(".sepa-bg").addClass("hidden");
-    $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "translateX(0)"); // 캐릭터도 제자리로
+    $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", ""); // 캐릭터도 제자리로
     setTimeout(function() { // 500ms 가 지나면
       $(".teamdt-bg").css("display", "none");
       $(".sepa-bg").css("display", "none");
@@ -82,13 +82,6 @@ $(document).ready(function() {
       default:
         break;
     }
-
-
-    $(".closebtn").click(function() {
-      // 이미지를 원위치로 돌아가게 설정
-      $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "translateX(0)");
-  
-    });
   });
 
 });
