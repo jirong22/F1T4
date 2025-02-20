@@ -27,7 +27,7 @@ fetch("./assets/team_data.txt")
           teamblog.style.backgroundImage = `url('../assets/personal-link/${blog.trim()}.ico')`;
 
           // 해당 멤버의 이름을 모달창에 표기합니다
-          document.getElementById("team-member-name").value = name;
+          document.getElementById("team-member-name").innerHTML = name;
 
           // 해당 멤버의 상세정보를 모달창에 표기합니다
           document.getElementById("team-member-details").innerHTML = details;

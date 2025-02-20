@@ -82,12 +82,14 @@
   margin: 80px 40px 40px 0px;
 }
 .form-control-name {
-  flex-grow: 1;
   width: 300px;
   margin: 10px 10px 10px 15px;
   font-size: 30px;
   border-radius: 5px;
   padding: 10px;
+  background-color: #f9f9f9;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
 }
 
 .form-control-dt {

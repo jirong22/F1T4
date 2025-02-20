@@ -1,4 +1,4 @@
-INTJ|임재영|개척민 임재영|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+INTJ|임재영|임재영 <span style="font-size: 24px; font-weight: bold;">Lim Jae-Yeong</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - SQL, HTML, CSS, JS, java, python, VBA, C++
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
@@ -13,7 +13,7 @@ INTJ|임재영|개척민 임재영|<span style="font-size: 24px; font-weight: bo
 - 이번주부터 주말에 운전면허 땁니다. 사고 안나게 도와주세요.
 - 15년을 키운 강아지가 있습니다. 최근에 못 놀아 줘서 저를 무시하네요
 - 부천에 11월의 발자국이란 빵집이 있습니다. 인절미슈 매우 맛납니다 乃|https://velog.io/@kalystols/posts/|https://github.com/supremhum/|velog:
-ESTJ|박지연|랜덤 박지연|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+ESTJ|박지연|박지연 <span style="font-size: 24px; font-weight: bold;">Park ji-Yeon</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - Java, JavaScript, SQL, CSS, Spring Framework, jQuery
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
@@ -26,7 +26,7 @@ ESTJ|박지연|랜덤 박지연|<span style="font-size: 24px; font-weight: bold;
 
 <span style="font-size: 24px; font-weight: bold;">4. TMI</span>
 - 요리하는걸 졸아하는데 요즘 12시간동안 공부하다보니 하루 한 끼로 끼니를 해결하는 날도 많아요.. 그만큼,,, 열심히 한단거겠죠,,코딩노예의 길로..|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
-INFP|안유빈|지켜줘 안유빈|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+INFP|안유빈|안유빈 <span style="font-size: 24px; font-weight: bold;">Ahn Yoo-Bin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - Java, SQL, Spring boot, HTML, CSS, JavaScript
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
@@ -38,7 +38,7 @@ INFP|안유빈|지켜줘 안유빈|<span style="font-size: 24px; font-weight: bo
 
 <span style="font-size: 24px; font-weight: bold;">4. TMI</span>
 - 최근에 이북리더기를 샀어요! 자투리 시간에 틈틈히 책을 읽어 한 달에 2권 이상 읽는 것이 목표입니다!|https://anyubinn.github.io/|https://github.com/anyubinn|yubinn:
-ISTJ|김현우|날개 김현우|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+ISTJ|김현우|김현우 <span style="font-size: 24px; font-weight: bold;">Kim hyun-Woo</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - Javascript, React, React Native, HTML, CSS, Java, MySql, Python, node.js
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
@@ -52,7 +52,7 @@ ISTJ|김현우|날개 김현우|<span style="font-size: 24px; font-weight: bold;
 - 귀여운 모란앵무 키웁니다.
     - 멍청하게 생겼어요 <span class="lovebird">[lovebird]<img class="lovebird-img" src="./assets/lovebird.png" alt="lovebird" /></span>
 - 팀원들 몰래 코드를 보기 좋게 바꿔놓습니다..?|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
-ENTP|백수린|학습된 백수린|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+ENTP|백수린|백수린 <span style="font-size: 24px; font-weight: bold;">Baek Soo-Rin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - javascript, css, html, mysql
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
