@@ -26,7 +26,7 @@ ESTJ|박지연|박지연 <span style="font-size: 24px; font-weight: bold;">Park 
 
 <span style="font-size: 24px; font-weight: bold;">4. TMI</span>
 - 요리하는걸 졸아하는데 요즘 12시간동안 공부하다보니 하루 한 끼로 끼니를 해결하는 날도 많아요.. 그만큼,,, 열심히 한단거겠죠,,코딩노예의 길로..|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
-INFP|안유빈|안유빈 <span style="font-size: 24px; font-weight: bold;">Ahn Yoo-Bin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
+INFP|안유빈|안유빈 <span style="font-size: 24px; font-weight: bold;">Ahn Yu-Bin</span>|<span style="font-size: 24px; font-weight: bold;">1. 사용할 수 있는 언어, 프레임워크</span>
 - Java, SQL, Spring boot, HTML, CSS, JavaScript
 
 <span style="font-size: 24px; font-weight: bold;">2. 자신의 장점</span>
