@@ -106,6 +106,7 @@
             />
           </li>
         </ul>
+
         <div class="sepa-bg"></div>
         <div class="teamdt-bg">
           <div class="teamdt-content">
@@ -200,13 +201,15 @@
         </div>
       </section>
 
-    <!-- 응원하기(방명록) 섹션 -->
-    <section class="guestbook" id="guestbook">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 team-members d-flex flex-column align-items-center">
-            <h1>응원하기ꯁ</h1>
-          </div>
+      <!-- 응원하기(방명록) 섹션 -->
+      <section class="guestbook" id="guestbook">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-3 team-members d-flex flex-column align-items-center"
+            >
+              <h1>응원하기ꯁ</h1>
+            </div>
 
             <!-- 방명록 목록 -->
             <div class="col-8 guestbook-list">
@@ -221,34 +224,44 @@
       </section>
     </main>
 
-  <!-- 모달 백그라운드 -->
-  <div class="modal-bg"></div>
-  <!-- 응원 문구 상세 모달 부분-->
-  <div class="modal-content detailmodal"></div>
-  <!-- 응원 문구 작성 모달 부분 -->
-  <!-- css에서 .cheercomment로 쓰면 됨 -->
-  <div class="modal-content cheercomment" id="cheercomment">
-    <div class="mb-3">
-      <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
-      <div class="form-floating mb-3 name">
-        <input type="text" class="form-control" id="name" placeholder="name">
-        <label for="name">이름</label>
-      </div>
+    <!-- 모달 백그라운드 -->
+    <div class="modal-bg"></div>
+    <!-- 응원 문구 상세 모달 부분-->
+    <div class="modal-content detailmodal"></div>
+    <!-- 응원 문구 작성 모달 부분 -->
+    <!-- css에서 .cheercomment로 쓰면 됨 -->
+    <div class="modal-content cheercomment" id="cheercomment">
+      <div class="mb-3">
+        <!-- css에서 .name으로 쓰면 됨. 필요 없다면 name은 삭제 가능 -->
+        <div class="form-floating mb-3 name">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="name"
+          />
+          <label for="name">이름</label>
+        </div>
 
-      <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
-      <div class="form-floating content">
-        <textarea class="form-control" placeholder="Leave a comment here" id="content" style="height: 200px"></textarea>
-        <label for="content">응원 내용</label>
+        <!-- css에서 .content로 쓰면 됨. 필요 없다면 content는 삭제 가능 -->
+        <div class="form-floating content">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="content"
+            style="height: 200px"
+          ></textarea>
+          <label for="content">응원 내용</label>
+        </div>
       </div>
     </div>
-  <!-- css에서 .button 부분 -->
-  <div class="mb-3 button">
-    <button type="button" class="btn btn-light postingbtn">등록</button>
-    <button type="button" class="btn btn-dark closebtn">닫기</button>
-  </div>
-  
-  <!-- 현재 날짜 출력 스크립트 -->
-  <script src="./scripts/curdate.js"></script>
-</body>
+    <!-- css에서 .button 부분 -->
+    <div class="mb-3 button">
+      <button type="button" class="btn btn-light postingbtn">등록</button>
+      <button type="button" class="btn btn-dark closebtn">닫기</button>
+    </div>
 
+    <!-- 현재 날짜 출력 스크립트 -->
+    <script src="./scripts/curdate.js"></script>
+  </body>
 </html>

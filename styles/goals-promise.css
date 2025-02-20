@@ -4,16 +4,18 @@
   padding: 50px 0;
   display: flex;
   flex-direction: column;
+  width: 80%;
+  justify-content: center;
 }
 
 /* 전체 컨테이너 */
 .layout-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 90%;
   margin: 50px auto;
-  height: 600px;
+  height: auto;
   flex: 1;
   flex-wrap: wrap;
   gap: 20px;
@@ -42,7 +44,7 @@
 
 .desc-goal {
   /*목표*/
-  margin-left: 600px;
+  margin-left: 400px;
   display: flex;
   flex-direction: column;
   align-items: right;
@@ -115,10 +117,10 @@
   border-radius: 50%;
   cursor: pointer;
 
-  /* 크기를 바깥 원의 25%로 설정 */
-  width: 20%;
-  height: 20%;
-  font-size: min(10vw, 3rem); /* 화면 크기에 맞게 글자 크기 조정 */
+  /* 크기를 바깥 원의 23%로 설정 */
+  width: 23%;
+  height: 23%;
+  font-size: min(15vw, 3rem); /* 화면 크기에 맞게 글자 크기 조정 */
   max-width: 120px;
   max-height: 120px;
   min-width: 80px;
@@ -134,20 +136,32 @@
 
 /*원 안의 아이템 둥글게 정렬*/
 .circle-item:nth-child(1) {
-  transform: rotate(0deg) translate(calc(40% + 5vw)) rotate(0deg);
+  transform: rotate(0deg) translate(180px) rotate(0deg);
 }
+
 .circle-item:nth-child(2) {
-  transform: rotate(60deg) translate(calc(40% + 5vw)) rotate(-60deg);
+  transform: rotate(60deg) translate(180px) rotate(-60deg);
 }
+
 .circle-item:nth-child(3) {
-  transform: rotate(120deg) translate(calc(40% + 5vw)) rotate(-120deg);
+  transform: rotate(120deg) translate(180px) rotate(-120deg);
 }
+
 .circle-item:nth-child(4) {
-  transform: rotate(180deg) translate(calc(40% + 5vw)) rotate(-180deg);
+  transform: rotate(180deg) translate(180px) rotate(-180deg);
 }
+
 .circle-item:nth-child(5) {
-  transform: rotate(240deg) translate(calc(40% + 5vw)) rotate(-240deg);
+  transform: rotate(240deg) translate(180px) rotate(-240deg);
 }
+
 .circle-item:nth-child(6) {
-  transform: rotate(300deg) translate(calc(40% + 5vw)) rotate(-300deg);
+  transform: rotate(300deg) translate(180px) rotate(-300deg);
 }
+
+/* 
+TODO 안쪽 작은 원을 바깥쪽 큰 원의 원래 위치에 고정
+TODO 목표&약속 텍스트 위치 반응형으로 수정
+TODO 네비게이션 헤더에서 방명록이 밑줄로 내려오는데, 그에 맞춰서 페이지도 아래로 스크롤
+TODO 지금 우리 팀원들은? 에서 09:00 이전 ~ 21:00 이후 시간은 각각 입실 전, 퇴실 전으로 체크
+ */
