@@ -31,7 +31,6 @@ body {
 
 }
 
-
 .guestbook-list {
   display: flex;
   flex-direction: column; /* 세로로 정렬 */
@@ -49,7 +48,6 @@ body {
   max-width: 700px;
   width: 100%;
   margin-bottom: 10px; /* 댓글 간의 간격 추가 */
-
 }
 
 .comment-item:hover {
@@ -75,7 +73,6 @@ body {
 .comment-date {
   color: #aaa; /* 날짜 색은 연한 회색 */
   margin: 10px;
-
 }
 
 .comment-content p {

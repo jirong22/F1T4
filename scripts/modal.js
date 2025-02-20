@@ -5,9 +5,14 @@ import {
   addDoc,
   Timestamp,
   query,
-  orderBy
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs, getDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  getDocs,
+  getDoc,
+  doc,
+  deleteDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTq2hFNBSkqZwNQ4ZWzvM0vM8s5p9yMsQ",
@@ -68,8 +73,8 @@ docs.forEach((doc) => {
 });
 
 // 상세 응원 문구 조회 (read)
-$('.comments-list').on('click', '.comment-item', async function () {
-  const docId = $(this).data('id');
+$(".comments-list").on("click", ".comment-item", async function () {
+  const docId = $(this).data("id");
 
   const docSnap = await getDoc(doc(db, "comments", docId));
 
@@ -77,29 +82,29 @@ $('.comments-list').on('click', '.comment-item', async function () {
     const data = docSnap.data();
     showDetailPage(data, docId);
   }
-})
+});
 
 // 상세 응원 문구 삭제 (delete)
-$('.modal-content').on('click', '.deletebtn', async function () {
-  const docId = $(this).data('id');
+$(".modal-content").on("click", ".deletebtn", async function () {
+  const docId = $(this).data("id");
 
   const docRef = doc(db, "comments", docId);
   await deleteDoc(docRef);
-  alert('삭제 완료!');
+  alert("삭제 완료!");
   closeModal();
   window.location.reload();
-})
+});
 
-$('.openbtn').click(function () {
+$(".openbtn").click(function () {
   openModal(".cheercomment");
 });
 
-$('.closebtn').click(closeModal);
+$(".closebtn").click(closeModal);
 
 // 상세 응원 문구 닫기
-$(document).on('click', '.closebtn', function () {
+$(document).on("click", ".closebtn", function () {
   closeModal();
-})
+});
 
 function openModal(modalSelector) {
   const scrollY = $(window).scrollTop();
@@ -121,14 +126,17 @@ function closeModal() {
   $(".modal-content").css("display", "none");
   $(".sepa-bg").css("display", "none");
   $(".teamdt-bg").css("display", "none");
-  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css("transform", "");
+  $("#intj-img, #estj-img, #infp-img, #istj-img, #entp-img").css(
+    "transform",
+    ""
+  );
 }
 
 function showDetailPage(data, docId) {
   const date = data.createdTime.toDate();
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   const formattedDate = `${year}.${month}.${day}`;
 
   let detailHtml = `
@@ -149,6 +157,6 @@ function showDetailPage(data, docId) {
   </div>
   `;
 
-  $('.modal-content.detailmodal').html(detailHtml);
+  $(".modal-content.detailmodal").html(detailHtml);
   openModal(".modal-content.detailmodal");
 }
