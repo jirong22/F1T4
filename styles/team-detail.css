@@ -89,14 +89,16 @@
   border-radius: 5px;
   padding: 10px;
 }
+
 .form-control-dt {
-  flex-grow: 1;
-  width: 550px;
-  height: 270px;
-  margin: 10px 10px 10px 0px;
-  font-size: 25px;
-  border-radius: 10px;
+  height: 250px;
+  overflow-y: auto;
   padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  font-size: 20px;
 }
 
 .buttons {
@@ -137,4 +139,25 @@
   pointer-events: none; /* 툴팁이 마우스 이벤트에 영향 주지 않도록 */
   display: none;
   z-index: 1999;
+}
+
+.lovebird {
+  position: relative;
+  cursor: pointer;
+}
+.lovebird .lovebird-img {
+  display: none;
+  position: absolute;
+  left: 105%;       /* 텍스트 오른쪽에 나타나게 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;     /* 원하는 크기로 조정 */
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 5px;
+  z-index: 10;
+}
+
+.lovebird:hover .lovebird-img {
+  display: block;
 }
