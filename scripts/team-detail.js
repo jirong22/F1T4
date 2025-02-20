@@ -87,3 +87,28 @@ $(document).ready(function() {
   });
 
 });
+
+// 추가부분****************************************************************************
+document.querySelectorAll('.team-member').forEach(member => {
+  // nickname 속성에 저장된 이름을 가져옵니다.
+  const memberName = member.getAttribute('nickname');
+
+  member.addEventListener('mouseenter', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.innerText = memberName;
+    nickname.style.display = 'block';
+    const bgColor = member.getAttribute('bg-color'); 
+    nickname.style.backgroundColor = bgColor; // 이름뒤 백컬러는 개인취향
+  });
+
+  member.addEventListener('mousemove', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.style.left = (e.pageX+10)+'px';
+    nickname.style.top = (e.pageY+20)+'px';
+  });
+
+  member.addEventListener('mouseleave', (e) => {
+    const nickname = document.getElementById('nickname');
+    nickname.style.display = 'none';
+  });
+});

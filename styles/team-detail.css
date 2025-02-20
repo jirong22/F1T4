@@ -122,3 +122,16 @@
   background-size: contain;
   background-position: center;
 }
+
+/* 추가부분 ********************************************* */
+#nickname {
+  position: absolute;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none; /* 툴팁이 마우스 이벤트에 영향 주지 않도록 */
+  display: none;
+  z-index: 1999;
+}
