@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   function updateTeamStatus() {
     const teamStatus = document.querySelector(".team-status");
+    const scheduleItems = document.querySelectorAll("#schedule-container li");
     const now = new Date();
     const currentTime = now.getHours() * 60 + now.getMinutes();
 
@@ -20,8 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
     teamStatus.textContent = `📌 지금 우리 팀원들은? : ${
       currentStatus ? currentStatus.status : "휴식 또는 개인 시간"
     }`;
+
+    scheduleItems.forEach((item) => item.classList.remove("active-schedule"));
+
+    if (currentStatus) {
+      scheduleItems.forEach((item) => {
+        if (item.textContent.includes(currentStatus.status)) {
+          item.classList.add("active-schedule");
+        }
+      });
+    } else {
+      // 현재 시간이 일정표에 없는 경우, "휴식 또는 개인 시간" 강조
+      scheduleItems.forEach((item) => {
+        if (item.textContent.includes("휴식 또는 개인 시간")) {
+          item.classList.add("active-schedule");
+        }
+      });
+    }
   }
 
   updateTeamStatus(); // 페이지 로드 시 업데이트
   setInterval(updateTeamStatus, 600000);
+
+  // 팀 상태 클릭 시 일정표 보이기/숨기기
+  const teamStatusSchedule = document.getElementById("team-status");
+  const scheduleContainer = document.getElementById("schedule-container");
+
+  // console.log("teamstatusschedule: " + teamStatusSchedule);
+  // console.log("schedulecontainer: " + scheduleContainer);
+
+  teamStatusSchedule.addEventListener("click", function () {
+    // console.log("schedule clicked");
+    scheduleContainer.classList.toggle("hidden");
+  });
 });
