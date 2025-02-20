@@ -1,16 +1,71 @@
-INTJ|임재영|사는곳 : 경기도
+INTJ|임재영|1. 사용할 수 있는 언어, 프레임워크
+- SQL, HTML, CSS, JS, java, python, VBA, C++
 
-왜 개발자?
-컴퓨터를 이젠 알고싶어졌다
+2. 자신의 장점
+- 논리적인 사고. 느리지만 멈추려 하지 않는 자세
 
-그래서 앞으론?
-이건 시험이 아니고 실전이니깐
-수단과 방법을 가리지 않으려고 함
+3. 자신의 협업 스타일
+- 아직 질문하기가 익숙치 않음. 
+- 경험한적 있는 상황에선 여유가 나오지만, 
+- 아닌 경우엔 스스로 몰아넣는 타입. 
 
-여기는글자가넘어가는지에대한설명을주저리1주저리2주저리3주저리4주저리5주저리6|https://velog.io/@kalystols/posts/|https://github.com/supremhum/|velog:
-ESTJ|박지연|지연님의 현명
-테스트1
-테스트2|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
-INFP|안유빈|유빈님의 기품|https://anyubinn.github.io/|https://github.com/anyubinn|yubinn:
-ISTJ|김현우|현우님의 영민|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
-ENTP|백수린|수린님의 지혜|https://velog.io/@luv_lyn/posts|https://github.com/harinbeee/|velog
+4. TMI
+- 이번주부터 주말에 운전면허 땁니다. 사고 안나게 도와주세요.
+- 15년을 키운 강아지가 있습니다. 최근에 못 놀아 줘서 저를 무시하네요
+- 부천에 11월의 발자국이란 빵집이 있습니다. 인절미슈 매우 맛납니다 乃|https://velog.io/@kalystols/posts/|https://github.com/supremhum/|velog:
+ESTJ|박지연|1. 사용할 수 있는 언어, 프레임워크
+- Java, JavaScript, SQL, CSS, Spring Framework, jQuery
+
+2. 자신의 장점
+- 느리더라도 꾸준히 해내겠다는 집념을 가지고 있어요. 
+- 천천히 가더라도 목표를 달성하는것이 중요하다고 믿습니다.
+- 개인 감정에 휘둘리지 않도록 감정 조절하며 긍정적인 에너지를 유지하려고합니다
+
+3. 자신의 협업 스타일
+- 팀원들의 의견을 존중하고 각자의 아이디어를 잘 듣는 것을 중요하게 생각합니다
+
+4. TMI
+- 요리하는걸 졸아하는데 요즘 12시간동안 공부하다보니 하루 한 끼로 끼니를 해결하는 날도 많아요.. 그만큼,,, 열심히 한단거겠죠,,코딩노예의 길로..|https://journal9493.tistory.com/|https://github.com/jirong22/|tistory:
+INFP|안유빈|1. 사용할 수 있는 언어, 프레임워크
+- Java, SQL, Spring boot, HTML, CSS, JavaScript
+
+2. 자신의 장점
+- 침착하고 끈기가 있어요
+- 감정기복이 잘 없는 편
+
+3. 자신의 협업 스타일
+- 맡은 일이 있다면 어떻게든 기한 내에 끝내는 스타일입니다
+
+4. TMI
+- 최근에 이북리더기를 샀어요! 자투리 시간에 틈틈히 책을 읽어 한 달에 2권 이상 읽는 것이 목표입니다!|https://anyubinn.github.io/|https://github.com/anyubinn|yubinn:
+ISTJ|김현우|1. 사용할 수 있는 언어, 프레임워크
+- Javascript, React, React Native, HTML, CSS, Java, MySql, Python, node.js
+
+2. 자신의 장점
+- 프로젝트 구조화, 리팩토링에 집착합니다.
+- 뭐를 해야겠다 싶으면 끝을 볼 때까지 완전 빠집니다.
+
+3. 자신의 협업 스타일
+- 정작 제가 모르는 부분이 있어도 최대한 도와드리려 합니다! 하던 일을 제쳐두고서라도요.
+
+4. TMI
+- 귀여운 모란앵무 키웁니다.
+    - 멍청하게 생겼어요 [lovebird]
+- 팀원들 몰래 코드를 보기 좋게 바꿔놓습니다..?|https://velog.io/@pottq577/posts/|https://github.com/pottq577/|velog:
+ENTP|백수린|1. 사용할 수 있는 언어, 프레임워크
+- javascript, css, html, mysql
+
+2. 자신의 장점
+- 한자리에 오래 앉아있는 것을 잘합니다
+- 포기를 (잘) 안합니다
+- 감정적으로 휘둘리지 않습니다
+- (+사적인 자리에서는 감정을 섞어 F적 사고를 풀가동시키는 유연함이 있습니다)
+
+3. 자신의 협업 스타일
+- 질문을 많이 합니다, 진행 상황에 대해 자주 공유하고 소통하려고 노력합니다.
+
+4. TMI
+- 다양한 직군들을 경험해왔습니다 진짜 기상천외한 일 많이 했음
+- 잠이 늘 부족한 관계로 다크서클이 심합니다 의사선생님의 권유로 피부과에 간적이 있습니다
+- 사주에 오행이 골고루 있습니다
+- 주로 isfp라고 말하고 다닙니다|https://velog.io/@luv_lyn/posts|https://github.com/harinbeee/|velog:
