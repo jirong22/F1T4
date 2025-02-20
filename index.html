@@ -21,20 +21,38 @@
   <link rel="icon" href="./assets/favicon.ico" />
 </head>
 
-<body>
-  <!-- 헤더 섹션 -->
-  <header class="p-3 text-bg-dark">
-    <div class="nav-header">
-      <h1 class="team-title">
-        <span class="highlight">F</span>
-        <span class="highlight">1</span>
-        <span class="highlight">T</span>
-        <span class="highlight">4</span>
-      </h1>
-      <!-- 현재 날짜 & 현재 상태 -->
-      <div class="status-container">
-        <span class="current-date" id="current-date"></span>
-        <span class="team-status" id="tema-status"></span>
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="p-3 text-bg-dark">
+      <div class="nav-header">
+        <h1 class="team-title">
+          <span class="highlight">F</span>
+          <span class="highlight">1</span>
+          <span class="highlight">T</span>
+          <span class="highlight">4</span>
+        </h1>
+        <!-- 현재 날짜 & 현재 상태 -->
+        <div class="status-container">
+          <span class="current-date" id="current-date"></span>
+          <span class="team-status" id="team-status"></span>
+        </div>
+      </div>
+
+      <!-- 일정표 -->
+      <div id="schedule-container" class="schedule hidden">
+        <h3>📅 우리 팀 일정표</h3>
+        <ul>
+          <li>09:00 ~ 09:30 - 데일리 스크럼 진행 중</li>
+          <li>09:30 ~ 10:30 - 알고리즘 학습 중</li>
+          <li>13:30 ~ 14:00 - 개인 학습 중</li>
+          <li>14:00 ~ 18:00 - 집중 코딩 중</li>
+          <li>20:00 ~ 20:30 - TIL 작성 중</li>
+          <li>20:30 ~ 21:00 - 하루 회고 진행 중</li>
+          <hr />
+          <li style="text-align: center; font-weight: bold">
+            기타 시간 - 휴식 또는 개인 시간
+          </li>
+        </ul>
       </div>
 
       <div class="divider"></div>
