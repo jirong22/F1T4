@@ -17,9 +17,9 @@ fetch("./assets/team_data.txt")
           const [mbtiType, name, details, link1, link2, blog] =
             memberData.split("|");
 
-          // 상세창의 왼쪽 이미지를 수정합니다. 이미지파일은 **일단** asets의 맞는mbti.png로 해뒀습니다.
+          // 상세창의 왼쪽 이미지를 수정합니다. 이미지파일은 이름.png
           const teamMemberContent = document.querySelector(".image-box");
-          teamMemberContent.style.backgroundImage = `url('../assets/MBTI/${mbtiType.toLowerCase()}.png')`;
+          teamMemberContent.style.backgroundImage = `url('../assets/${name}.png')`;
 
           // 해당 멤버의 블로그와 깃헙 주소에 맞게 버튼 이미지를 변경합니다
           const teamblog = document.querySelector(".btn-with-bg1");
