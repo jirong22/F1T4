@@ -3,107 +3,179 @@
   padding: 50px 20px; /* 충분한 여백 */
   border-radius: 15px; /* 모서리 둥글게 처리 */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: flex; /* 최대 너비 자동 제한 */
+  max-width: 900px; /* 최대 너비를 100%로 설정 */
   margin: auto; /* 중앙 정렬 */
+  width: 100%;
   overflow: hidden; /* 내용이 넘치지 않게 처리 */
-  display: flex; /*  레이아웃 설정 */
+  display: flex; /* flex 레이아웃 사용 */
   flex-direction: column; /* 세로 방향으로 정렬 */
-  justify-content: space-between; /* 여백 분배 */
-  height: 00pxflex; /* 고정 높이 자동 */
+  justify-content: flex-start; /* 세로 방향으로 위쪽 정렬 */
+  align-items: center; /* 가로로 중앙 정렬 */
+  min-height: 900px; /* 최소 높이 설정 (원하는 만큼 조정 가능) */
 }
 
 #guestbook h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #333;
-  text-align: auto;
-  margin-bottom: 80px;
+  text-align: center; /* 텍스트 가로 중앙 정렬 */
+  margin-bottom: 30px;
   font-weight: bold;
 }
+
 
 .guestbook-list {
   display: flex;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 0px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  padding: 50px 20px; /* 패딩을 늘려서 여백 확보 */
-  width: 100%; /* 전체 너비 차지 */
-  justify-content: space-between;
-}
-
-.guestbook .container {
-  /* display: flex; */
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  height: auto;  /* height 수정 */
-}
-
-.guestbook .container .row {
-  /* display: flex; */
-  justify-content: space-between; 
-  gap: 10px;
-  width: 100%;
-}
-
-.team-members li  {
-  list-style-type: none;
+  flex-direction: column; /* 세로로 정렬 */
+  gap: 10px; /* 각 댓글 사이 간격 */
+  margin: 10px;
+  max-width: 800px;
 }
 
 .comment-item {
-  background-color: white;
-  padding: 13px;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 5px;
-  transition: all 0.3s ease;
+  background-color: white; /* 댓글 배경 */
+  padding: 15px; /* 댓글 내 여백 */
+  border-radius: 16px; /* 댓글 모서리 둥글게 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 가벼운 그림자 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 애니메이션 효과 */
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 10px; /* 댓글 간의 간격 추가 */
+
 }
 
 .comment-item:hover {
-  transform: translateY(-13px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-13px); /* 마우스 호버 시 위로 올라가는 효과 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 크기 증가 */
 }
 
 .comment-header {
-  /* display: flex; */
-  /* justify-content: space-between; */
+  display: flex;
+  justify-content: space-between; /* 이름과 날짜를 양옆으로 배치 */
   font-size: 1rem;
-  margin-bottom: 13px;
+  margin-bottom: 10px; /* 댓글 본문과 구분 */
 }
 
 .commenter-name {
-  font-weight: bold;
-  color: #007bff;
+  font-weight: bold; /* 작성자 이름 강조 */
+  color: #007bff; /* 파란색으로 강조 */
+  text-align: left;
+  margin: 10px;
 }
 
 .comment-date {
-  color: #aaa;
+  color: #aaa; /* 날짜 색은 연한 회색 */
+  margin: 10px;
+
 }
 
 .comment-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
-  line-height: 1.6; /* 줄 간격  */
+  line-height: 1; /* 줄 간격  */
+  margin: 10px;
 }
 
 .comment-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+  /* width: 50px; */
+  /* height: 50px; */
+  /* object-fit: cover; */
+  /* border-radius: 50%; */
+  display: none; /* 이미지를 숨김 */
 }
+
 
 button {
   background-color: #007bff; /* 파란색 버튼 */
-  color: white;
-  padding: 12px 25px;
+  color: white; /* 글자색 흰색 */
+  padding: 40px 80px; /* 버튼 크기  */
   border: none;
   border-radius: 30px; /* 버튼 둥글게 */
-  font-size: 1.1rem;
+  font-size: 3rem;
   cursor: pointer;
   transition: background-color 0.3s ease; /* 버튼 호버 시 색상 변환 */
-  align-self: flex-end; /* 버튼을 하단 우측에 배치 */
+  display: inline-block;
+}
+
+.button-container {
+  display: flex; /* Flexbox를 사용 */
+  justify-content: flex-end; /* 버튼을 가로로 끝에 배치 */
+  align-items: flex-end; /* 버튼을 세로로 끝에 배치 */
+  height: 100px; /* 구역의 높이를 설정 */
+  margin: 5px;
+  padding: 50px;
+}
+
+/* 버튼 호버 */
+button:hover {
+  background-color: #0056b3; /* 호버 시 어두운 파란색 */
+}
+
+/* 버튼 클릭 시 테두리 제거 */
+button:focus {
+  outline: none; /* 버튼 클릭 시 테두리 없애기 */
+}
+
+/* 모달 배경 흐리게 처리 */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 반투명 배경 */
+  z-index: 999;
+}
+
+/* 모달 스타일 */
+.modal-content.cheercomment {
+  background-color: #fff; /* 흰색 배경 */
+  border-radius: 20px; /* 모서리 둥글게 */
+  padding: 30px;
+  width: 500px;
+  max-width: 90%;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* 이름 입력 필드 스타일 */
+.name .form-control {
+  border-radius: 10px; /* 둥근 입력 박스 */
+  border: 1px solid #ccc; /* 연한 회색 테두리 */
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.name label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 응원 내용 입력 필드 스타일 */
+.content .form-control {
+  border-radius: 10px; /* 둥근 입력 박스 */
+  border: 1px solid #ccc; /* 연한 회색 테두리 */
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.content label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 기본 버튼 스타일 */
+button {
+  background-color: #007bff; /* 파란색 버튼 */
+  color: white; /* 글자색 흰색 */
+  padding: 12px 25px; /* 버튼 크기 */
+  border: none;
+  border-radius: 30px; /* 둥글게 */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 호버 효과 */
 }
 
 button:hover {
@@ -111,17 +183,25 @@ button:hover {
 }
 
 button:focus {
-  outline: none; /* 버튼 클릭 시 테두리 없애기 */
+  outline: none;
 }
 
-.guestbook .container {
+.button {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between; /* 버튼을 좌우로 정렬 */
+  gap: 15px; /* 버튼 간격을 15px로 수정 */
+  margin-top: 20px;
+} 
+
+button.btn-light {
+  background-color: #007bff; /* 어두운 배경 */
+  color: #f8f9fa; /* 밝은 글자 */
+  border: 1px solid #ccc; /* 경계선 추가 */
 }
 
-.comment-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+/* dark 버튼 스타일 */
+button.btn-dark {
+  background-color: #f8f9fa; /* 밝은 배경 */
+  color: #007bff; /* 어두운 글자 */
+  border: 1px solid #ccc; /* 경계선 추가 */
 }
